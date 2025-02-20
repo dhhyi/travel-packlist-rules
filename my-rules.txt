@@ -1,0 +1,159 @@
+#
+# Elektronik
+#
+
+:-
+[Elektronik] kleines Ladegerät + Kabel,
+[Elektronik] Powerbank,
+[Elektronik] Handy Ständer,
+;
+
+:- Wirst du länger unterwegs sein? $longer;
+longer :- Wirst du länger als einen Monat unterwegs sein? $even_longer;
+
+longer :- [Elektronik] Chromecast;
+
+:- Willst du arbeiten? $working;
+
+working :-
+[Elektronik] grosses Netzteil,
+[Elektronik] Arbeits Laptop,
+[Elektronik] Gaming Laptop,
+[Elektronik] HDMI USB Kabel,
+;
+
+:- Wirst du einen Adapter für Strom brauchen? $nonEUelectricity;
+
+nonEUelectricity :- [Elektronik] Steckdosen-Adapter;
+
+#
+# Kleidung
+#
+
+:-
+[Kleidung] Schlafanzughose,
+[Kleidung] Schlaf T-Shirt,
+[Kleidung] Unterhemd,
+[Kleidung] Unterhosen,
+[Kleidung] Strümpfe,
+[Kleidung] T-Shirts,
+Erwartest du kaltes Wetter (bis 10 Grad)? $cold,
+[Kleidung] lange Hose,
+;
+
+NOT freezing :- [Kleidung] Weste;
+
+cold :- Erwartest du richtig kaltes Wetter (unter 0 Grad)? $freezing;
+
+cold AND NOT freezing :-
+[Kleidung] dünne Jacke;
+
+freezing :-
+[Kleidung] Winterjacke,
+[Kleidung] dicke lange Hose,
+;
+
+#
+# Zubehör
+#
+
+:-
+[Utility] Bleistift,
+[Utility] Brillenputztuch,
+[Utility] Badeschuhe,
+[Utility] Ear Buds,
+[Utility] Gehörschutz,
+[Utility] Regenschirm,
+[Utility] Einkaufstasche,
+;
+
+longer OR hiking :-
+[Utility] Tagesrucksack;
+
+NOT hiking :- [Utility] Tempo Taschentücher;
+
+longer :- Hast du eine Waschmaschiene zur Verfügung? $washer;
+longer AND NOT washer :-
+[Utility] Scrubber,
+[Utility] Wäscheleine,
+[Utility] Travel-Wash,
+[Utility] Kleiderbügel,
+;
+
+longer :- Willst du kochen? $cooking;
+longer AND cooking :-
+[Utility] Flexlöffel,
+[Utility] Käsereibe;
+
+longer :- [Utility] Erste-Hilfe Set;
+
+:- Brauchst du deinen Clubausweis? $clubid;
+clubid :- [Utility] Clubausweis;
+
+#
+# Hygiene
+#
+
+:-
+[Hygiene] Zahnpasta,
+[Hygiene] Zahnbürste,
+[Hygiene] Interdentalbürsten,
+[Hygiene] Seife,
+[Hygiene] Travel-Bidet + Tuch,
+[Hygiene] Last Swab,
+[Hygiene] Lippenbalsam,
+[Hygiene] Sonnencreme,
+[Hygiene] Nagelclip,
+[Hygiene] Bürste/Kamm,
+;
+
+longer AND even_longer :- [Hygiene] Grooming Kit;
+
+#
+# Hiking
+#
+
+:- Wirst du wandern? $hiking;
+
+hiking :-
+Willst du Touringen Stempel sammeln? $touringen;
+
+hiking AND touringen :- [Wandern] Touringen Stempelheft;
+
+touringen :- [Wandern] Stempelfarbe;
+
+hiking :-
+[Wandern] Garmin,
+[Wandern] Wanderhut,
+[Wandern] Multifunktionstuch,
+[Wandern] Mini-Powerbank,
+[Wandern] Nacht-Wanderlicht,
+[Wandern] Gaitors,
+[Wandern] Stativ,
+[Wandern] Wasserblase,
+[Wandern] Fernglas,
+[Wandern] Kochzubehör,
+[Wandern] Tempo Taschentücher,
+[Wandern] Schaufel,
+;
+
+#
+# Optional
+#
+
+longer AND washer :- [Optional] Waschmaschienen Pods;
+
+:- [Optional] Travel-Handtuch;
+
+:- Brauchst du eine eigene Schlafgelegenheit? $sleeping_help;
+
+sleeping_help :-
+   Brauchst du ein Dach über dem Kopf? $house;
+
+sleeping_help :-
+   [Haus] Hüttenschlafsack,
+   [Haus] Schlafsack;
+
+sleeping_help AND house :-
+   [Haus] Zelt,
+   [Haus] Picknick Decke;
