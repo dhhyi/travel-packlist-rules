@@ -1,159 +1,246 @@
-#
-# Elektronik
-#
+NOT duration-longer AND NOT type-camping :-
+   Dauer: Tagesausflug? $duration-daytrip;
+
+NOT duration-daytrip :-
+   Dauer: 4 Tage bis 4 Wochen? $duration-longer;
+
+duration-longer :-
+   Dauer: > 1 Monat? $duration-even_longer;
+
+NOT duration-daytrip AND NOT type-camping :-
+   Unterkunft: Bett verfügbar? $type-bed;
+
+NOT duration-daytrip AND NOT type-bed :-
+   Unterkunft: Camping? $type-camping;
+
+type-camping OR NOT duration-daytrip AND NOT duration-longer :-
+   [Tasche] Kleines blaues Hard Case 47g;
+
+NOT type-camping AND NOT duration-longer AND NOT duration-daytrip :-
+   [Tasche] Rucksack Jack Wolfskin 1140g;
+
+NOT type-camping AND duration-longer :-
+   [Tasche] Rucksack Mark Ryden 1.3kg;
+
+duration-daytrip OR duration-longer OR hiking OR type-camping :-
+   [Tasche] Drawstring bag 245g,
+   [Wandern] Sitzkissen 95g;
+
+type-camping OR hiking :-
+   [Wandern] Mülltasche 35g;
+
+:- [Elektronik] Ear Buds 62g;
+
+NOT duration-daytrip :-
+   [Elektronik] kleines Ladegerät + Kabel 62g,
+   [Elektronik] Powerbank 392g,
+   [Elektronik] Entertainment Stick 10g;
+
+NOT type-camping AND duration-longer :-
+   [Elektronik] Chromecast 40g,
+   [Elektronik] USB-C Verlängerung 71g,
+   [Tasche] Kabeltasche Herlitz 76g;
 
 :-
-[Elektronik] kleines Ladegerät + Kabel,
-[Elektronik] Powerbank,
-[Elektronik] Handy Ständer,
-;
+   Wetter: warm (über 20 Grad)? $weather-warm,
+   Wetter: kalt (bis 10 Grad)? $weather-cold,
+   Wetter: Regen? $weather-rain,
+   Wetter: hoher UV Index? $weather-uv;
 
-:- Wirst du länger unterwegs sein? $longer;
-longer :- Wirst du länger als einen Monat unterwegs sein? $even_longer;
+NOT duration-daytrip :-
+   [Kleidung] Schlafanzughose 130g,
+   [Kleidung] Schlaf T-Shirt 175g,
+   [Kleidung] Unterhemd 60g,
+   [Kleidung] lange Hose 340g;
 
-longer :- [Elektronik] Chromecast;
+NOT duration-daytrip AND type-camping :-
+   [Kleidung] Wechsel T-Shirt,
+   [Kleidung] Wechsel Unterhose,
+   [Kleidung] Wechsel Strümpfe;
 
-:- Willst du arbeiten? $working;
+NOT duration-daytrip AND NOT type-camping :-
+   [Kleidung] 3 T-Shirts 500g,
+   [Kleidung] 2 Unterhosen 190g,
+   [Kleidung] 2 Strümpfe 110g;
+
+weather-warm :-
+   [Kleidung] kurze Hose;
+
+weather-cold :-
+   Wetter: richtig kalt (unter 0 Grad)? $weather-freezing;
+
+weather-cold AND NOT weather-freezing :-
+   [Kleidung] dünne Jacke 530g;
+
+NOT weather-freezing :-
+   [Kleidung] Weste 370g;
+
+weather-freezing :-
+   [Kleidung] Winterjacke 665g,
+   [Kleidung] dicke lange Hose 540g,
+   [Kleidung] Hosenträger 175g;
+
+:-
+   [Utility] Gehörschutz 22g,
+   [Utility] Regenschirm 200g,
+   [Utility] Tempo Taschentücher 25g;
+
+NOT duration-daytrip :-
+   [Utility] Bleistift 12g,
+   [Utility] Brillenputztuch 5g,
+   [Utility] Badeschuhe 194g,
+   [Utility] Notfall Nähset 1g;
+
+NOT type-camping :-
+   [Utility] Einkaufstasche 56g;
+
+NOT type-camping AND NOT duration-daytrip :-
+   [Utility] Handy Ständer 118g,
+   [Hygiene] Travel-Bidet + Tuch 95g;
+
+duration-longer :-
+   Hast du eine Waschmaschine zur Verfügung? $washer;
+
+duration-longer AND washer :-
+   [Wäsche] Waschmaschinen Pods;
+
+type-camping OR duration-longer :-
+   [Wäsche] Wäscheleine 26g;
+
+duration-longer AND NOT type-camping AND NOT washer :-
+   [Wäsche] Scrubber 150g,
+   [Wäsche] Travel-Wash;
+
+duration-longer :-
+   Willst du kochen? $cooking;
+
+duration-longer AND cooking AND NOT type-camping :-
+   [Kochen] Flexlöffel 37g,
+   [Kochen] Käsereibe 39g;
+
+duration-longer OR type-camping :-
+   [Utility] Erste-Hilfe Set 95g,
+   [Utility] Cork massage ball 15g;
+
+NOT duration-daytrip :-
+   [Tasche] Waschtasche 57g,
+   [Hygiene] Zahnpasta 100g,
+   [Hygiene] Zahnbürste 17g,
+   [Hygiene] Interdentalbürsten,
+   [Hygiene] Mundspülung,
+   [Hygiene] Travelbuddy und Seife 156g,
+   [Hygiene] Last Swab 12g,
+   [Hygiene] Lippenbalsam 10g,
+   [Hygiene] Nagelset 55g;
+
+weather-uv :-
+   [Hygiene] Sonnencreme;
+
+type-camping :-
+   [Hygiene] Travel-Handtuch 80g,
+   [Tasche] Rucksack Deuter 2.8kg,
+   [Tasche] Taskin compression bag 160g,
+   [Wandern] LifeStraw 50g,
+   [Utility] Swedish cloth 10g;
+
+duration-longer AND duration-even_longer :-
+   [Hygiene] Grooming Kit 120g;
+
+weather-uv :-
+   [Wandern] Wanderhut 96g;
+
+:-
+   [Elektronik] Mini-Powerbank 102g,
+   [Wandern] Multifunktionstuch 35g,
+   [Wandern] Taschenmesser 63g;
+
+type-bed OR duration-daytrip :-
+   Wirst du wandern? $hiking;
+
+type-camping OR hiking :-
+   [Wandern] Garmin eTrex SE 157g,
+   [Wandern] Nacht-Wanderlicht 44g,
+   [Wandern] Gaitors 69g,
+   [Wandern] Stativ 125g,
+   [Wandern] Schaufel 27g;
+
+hiking AND cooking OR type-camping :-
+   [Kochen] Kochzubehör 315g;
+
+type-camping AND duration-longer :-
+   [Kochen] Extra Brennstoff;
+
+hiking OR type-camping :-
+   Willst du Touringen Stempel sammeln? $touringen;
+
+touringen :-
+   [Wandern] Touringen Stempelheft 130g,
+   [Wandern] Stempelfarbe 80g;
+
+hiking AND weather-rain :-
+   [Wandern] Poncho 165g;
+
+type-camping OR sleeping_bag :-
+   [Unterkunft] Isomatte 580g;
+
+type-camping :-
+   [Unterkunft] Trekology Kissen 105g,
+   [Unterkunft] 10T Kissen 290g;
+
+sleeping_bag :-
+   [Unterkunft] Cocoon Camping Kissen 180g,
+   [Unterkunft] Hüttenschlafsack 500g;
+
+type-camping AND NOT weather-freezing OR sleeping_bag :-
+   [Unterkunft] Schlafsack 3J 850g;
+
+type-camping AND weather-freezing :-
+   [Unterkunft] Schlafsack 4J 1.7kg;
+
+type-camping :-
+   [Unterkunft] Zelt 845g,
+   [Unterkunft] Zelt Heringe 215g,
+   [Unterkunft] Coalatree Kachula Blanket 790g;
+
+type-camping OR hiking :-
+   Wanderstöcke? $trekking_poles;
+
+type-camping OR trekking_poles :-
+   [Wandern] Wanderstock 1 (Zeltstange) 270g;
+
+trekking_poles :-
+   [Wandern] Wanderstock 2 270g;
+
+NOT type-camping :-
+   Willst du arbeiten? $working;
 
 working :-
-[Elektronik] grosses Netzteil,
-[Elektronik] Arbeits Laptop,
-[Elektronik] Gaming Laptop,
-[Elektronik] HDMI USB Kabel,
-;
+   [Tasche] Tablet Tasche 165g,
+   [Elektronik] grosses Netzteil 235g,
+   [Elektronik] Arbeits Laptop 1170g,
+   [Elektronik] Gaming Laptop 841g,
+   [Elektronik] USB-C Kabel 105g,
+   [Elektronik] Tablet Ständer 330g,
+   [Elektronik] Periboard Tastatur 137g,
+   [Elektronik] Yoga Maus 62g;
+
+:- Gibt es ein Studentenclub Event? $club;
+
+club :-
+   [Utility] Clubausweis,
+   [Kleidung] Club-Shirt;
 
 :- Wirst du einen Adapter für Strom brauchen? $nonEUelectricity;
 
-nonEUelectricity :- [Elektronik] Steckdosen-Adapter;
+nonEUelectricity :-
+   [Elektronik] Steckdosen-Adapter;
 
-#
-# Kleidung
-#
+NOT duration-daytrip AND NOT type-camping :-
+   Schlafsack mitbringen? $sleeping_bag,
+   Längere Busfahrt? $bus_travel;
 
-:-
-[Kleidung] Schlafanzughose,
-[Kleidung] Schlaf T-Shirt,
-[Kleidung] Unterhemd,
-[Kleidung] Unterhosen,
-[Kleidung] Strümpfe,
-[Kleidung] T-Shirts,
-Erwartest du kaltes Wetter (bis 10 Grad)? $cold,
-[Kleidung] lange Hose,
-;
+bus_travel :-
+   [Unterkunft] Cocoon Neck Pillow 120g;
 
-NOT freezing :- [Kleidung] Weste;
-
-cold :- Erwartest du richtig kaltes Wetter (unter 0 Grad)? $freezing;
-
-cold AND NOT freezing :-
-[Kleidung] dünne Jacke;
-
-freezing :-
-[Kleidung] Winterjacke,
-[Kleidung] dicke lange Hose,
-;
-
-#
-# Zubehör
-#
-
-:-
-[Utility] Bleistift,
-[Utility] Brillenputztuch,
-[Utility] Badeschuhe,
-[Utility] Ear Buds,
-[Utility] Gehörschutz,
-[Utility] Regenschirm,
-[Utility] Einkaufstasche,
-;
-
-longer OR hiking :-
-[Utility] Tagesrucksack;
-
-NOT hiking :- [Utility] Tempo Taschentücher;
-
-longer :- Hast du eine Waschmaschiene zur Verfügung? $washer;
-longer AND NOT washer :-
-[Utility] Scrubber,
-[Utility] Wäscheleine,
-[Utility] Travel-Wash,
-[Utility] Kleiderbügel,
-;
-
-longer :- Willst du kochen? $cooking;
-longer AND cooking :-
-[Utility] Flexlöffel,
-[Utility] Käsereibe;
-
-longer :- [Utility] Erste-Hilfe Set;
-
-:- Brauchst du deinen Clubausweis? $clubid;
-clubid :- [Utility] Clubausweis;
-
-#
-# Hygiene
-#
-
-:-
-[Hygiene] Zahnpasta,
-[Hygiene] Zahnbürste,
-[Hygiene] Interdentalbürsten,
-[Hygiene] Seife,
-[Hygiene] Travel-Bidet + Tuch,
-[Hygiene] Last Swab,
-[Hygiene] Lippenbalsam,
-[Hygiene] Sonnencreme,
-[Hygiene] Nagelclip,
-[Hygiene] Bürste/Kamm,
-;
-
-longer AND even_longer :- [Hygiene] Grooming Kit;
-
-#
-# Hiking
-#
-
-:- Wirst du wandern? $hiking;
-
-hiking :-
-Willst du Touringen Stempel sammeln? $touringen;
-
-hiking AND touringen :- [Wandern] Touringen Stempelheft;
-
-touringen :- [Wandern] Stempelfarbe;
-
-hiking :-
-[Wandern] Garmin,
-[Wandern] Wanderhut,
-[Wandern] Multifunktionstuch,
-[Wandern] Mini-Powerbank,
-[Wandern] Nacht-Wanderlicht,
-[Wandern] Gaitors,
-[Wandern] Stativ,
-[Wandern] Wasserblase,
-[Wandern] Fernglas,
-[Wandern] Kochzubehör,
-[Wandern] Tempo Taschentücher,
-[Wandern] Schaufel,
-;
-
-#
-# Optional
-#
-
-longer AND washer :- [Optional] Waschmaschienen Pods;
-
-:- [Optional] Travel-Handtuch;
-
-:- Brauchst du eine eigene Schlafgelegenheit? $sleeping_help;
-
-sleeping_help :-
-   Brauchst du ein Dach über dem Kopf? $house;
-
-sleeping_help :-
-   [Haus] Hüttenschlafsack,
-   [Haus] Schlafsack;
-
-sleeping_help AND house :-
-   [Haus] Zelt,
-   [Haus] Picknick Decke;
+NOT always :-
+   [Unterkunft] Picnick Decke 540g;
