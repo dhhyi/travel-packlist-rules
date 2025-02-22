@@ -249,3 +249,8 @@ duration-daytrip :-
    [Verpflegung] Wasser,
    [Verpflegung] Mahlzeit,
    [Verpflegung] Snack;
+
+:- Geht es ins nicht-europäische Ausland? $outside-eu;
+
+outside-eu :-
+   [Dokumente] Reisepass;
