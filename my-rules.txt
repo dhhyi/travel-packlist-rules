@@ -173,7 +173,7 @@ type-bed OR duration-daytrip :-
 type-camping OR hiking :-
    [Wandern] Garmin eTrex SE 157g,
    [Wandern] Nacht-Wanderlicht 44g,
-   [Wandern] Gaitors 69g,
+   [Kleidung] Gaitors 69g,
    [Wandern] Schaufel 27g;
 
 hiking AND cooking OR type-camping :-
@@ -250,7 +250,7 @@ working :-
 :- Gibt es ein Studentenclub Event? $club;
 
 club :-
-   [Utility] Clubausweis,
+   [Dokumente] Clubausweis,
    [Kleidung] Club-Shirt;
 
 :- Wirst du einen Adapter für Strom brauchen? $nonEUelectricity;
