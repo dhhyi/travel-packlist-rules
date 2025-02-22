@@ -244,3 +244,8 @@ bus_travel :-
 
 NOT always :-
    [Unterkunft] Picnick Decke 540g;
+
+duration-daytrip :-
+   [Verpflegung] Wasser,
+   [Verpflegung] Mahlzeit,
+   [Verpflegung] Snack;
