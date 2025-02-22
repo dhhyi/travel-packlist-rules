@@ -36,7 +36,7 @@ duration-daytrip OR duration-longer OR hiking OR type-camping :-
 type-camping OR hiking :-
    [Wandern] Mülltasche 35g;
 
-:- [Elektronik] Ear Buds 62g;
+:-;
 
 NOT duration-daytrip :-
    [Elektronik] kleines Ladegerät + Kabel 62g,
@@ -234,7 +234,8 @@ working :-
    [Elektronik] USB-C Kabel 105g,
    [Elektronik] Tablet Ständer 330g,
    [Elektronik] Periboard Tastatur 137g,
-   [Elektronik] Yoga Maus 62g;
+   [Elektronik] Yoga Maus 62g,
+   [Elektronik] Ear Buds 62g;
 
 :- Gibt es ein Studentenclub Event? $club;
 
@@ -259,7 +260,7 @@ NOT always :-
 
 :- [Verpflegung] Wasser;
 
-duration-daytrip :-
+duration-daytrip AND hiking :-
    [Verpflegung] Oats,
    [Verpflegung] Snack,
    [Utility] Löffel;
