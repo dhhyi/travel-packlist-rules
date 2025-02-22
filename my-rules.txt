@@ -33,7 +33,7 @@ type-camping OR hiking :-
 
 NOT duration-daytrip :-
    [Elektronik] kleines Ladegerät + Kabel 62g,
-   [Elektronik] Powerbank 392g,
+   [Elektronik] Anker Zolo Powerbank 355g,
    [Elektronik] Entertainment Stick 10g;
 
 NOT type-camping AND duration-longer :-
@@ -150,7 +150,7 @@ weather-uv :-
    [Wandern] Wanderhut 96g;
 
 :-
-   [Elektronik] Mini-Powerbank 102g,
+   [Elektronik] Anker Nano Powerbank 102g,
    [Wandern] Multifunktionstuch 35g,
    [Wandern] Taschenmesser 63g;
 
@@ -180,8 +180,11 @@ touringen :-
 hiking AND weather-rain :-
    [Wandern] Poncho 165g;
 
-type-camping OR sleeping_bag :-
-   [Unterkunft] Isomatte 580g;
+sleeping_bag OR type-camping AND NOT weather-cold AND NOT weather-freezing :-
+   [Unterkunft] Isomatte Nordmut R=1.6 580g;
+
+type-camping AND weather-cold OR type-camping AND weather-freezing :-
+   [Unterkunft] Isomatte Outdoorer R=4 900g;
 
 type-camping :-
    [Unterkunft] Trekology Kissen 105g,
