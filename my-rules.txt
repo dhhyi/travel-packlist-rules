@@ -87,6 +87,10 @@ weather-freezing :-
    [Kleidung] Stirnband,
    [Kleidung] Winterhandschuhe;
 
+weather-freezing AND hiking :-
+   [Kleidung] Mesh Hemd 163g,
+   [Kleidung] Lange Unterhose 164g;
+
 :-
    [Utility] Gehörschutz 22g,
    [Utility] Regenschirm 200g,
@@ -161,7 +165,7 @@ weather-uv :-
 :-
    [Elektronik] Anker Nano Powerbank 102g,
    [Kleidung] Multifunktionstuch 35g,
-   [Wandern] Taschenmesser 63g;
+   [Utility] Taschenmesser 63g;
 
 type-bed OR duration-daytrip :-
    Wirst du wandern? $hiking;
@@ -182,8 +186,8 @@ hiking OR type-camping :-
    Willst du Touringen Stempel sammeln? $touringen;
 
 touringen :-
-   [Wandern] Touringen Stempelheft 130g,
-   [Wandern] Stempelfarbe 80g;
+   [Dokumente] Touringen Stempelheft 130g,
+   [Dokumente] Stempelfarbe 80g;
 
 hiking AND weather-rain :-
    [Wandern] Poncho 165g;
