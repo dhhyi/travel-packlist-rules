@@ -250,8 +250,9 @@ NOT always :-
 
 duration-daytrip :-
    [Verpflegung] Wasser,
-   [Verpflegung] Mahlzeit,
-   [Verpflegung] Snack;
+   [Verpflegung] Oats,
+   [Verpflegung] Snack,
+   [Utility] Löffel;
 
 :- Geht es ins nicht-europäische Ausland? $outside-eu;
 
