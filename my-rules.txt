@@ -8,6 +8,10 @@ duration-longer :-
    Dauer: > 1 Monat? $duration-even_longer,
    Mutti Besuch? $mutti;
 
+mutti :-
+   [Extras] Kaffee,
+   [Extras] Extras;
+
 NOT duration-daytrip AND NOT type-camping AND NOT mutti :-
    Unterkunft: Bett verfügbar? $type-bed;
 
