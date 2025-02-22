@@ -93,8 +93,10 @@ weather-freezing :-
 NOT duration-daytrip :-
    [Utility] Bleistift 12g,
    [Utility] Brillenputztuch 5g,
-   [Utility] Badeschuhe 194g,
    [Utility] Notfall Nähset 1g;
+
+NOT duration-daytrip AND NOT mutti :-
+   [Utility] Badeschuhe 194g;
 
 NOT type-camping :-
    [Utility] Einkaufstasche 56g;
