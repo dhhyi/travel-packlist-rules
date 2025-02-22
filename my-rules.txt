@@ -116,7 +116,7 @@ duration-longer AND washer :-
 type-camping AND NOT mutti OR duration-longer AND NOT mutti :-
    [Wäsche] Wäscheleine 26g;
 
-duration-longer AND NOT type-camping AND NOT washer :-
+duration-longer AND NOT type-camping AND NOT washer AND NOT mutti :-
    [Wäsche] Scrubber 150g,
    [Wäsche] Travel-Wash;
 
@@ -247,7 +247,7 @@ club :-
 nonEUelectricity :-
    [Elektronik] Steckdosen-Adapter;
 
-NOT duration-daytrip AND NOT type-camping :-
+NOT duration-daytrip AND NOT type-camping AND NOT mutti :-
    Schlafsack mitbringen? $sleeping_bag,
    Längere Busfahrt? $bus_travel;
 
