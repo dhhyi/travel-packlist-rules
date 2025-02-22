@@ -23,7 +23,7 @@ NOT type-camping AND duration-longer :-
    [Tasche] Rucksack Mark Ryden 1.3kg;
 
 duration-daytrip OR duration-longer OR hiking OR type-camping :-
-   [Tasche] Drawstring bag 245g,
+   [Tasche] Drawstring bag 230g,
    [Wandern] Sitzkissen 95g;
 
 type-camping OR hiking :-
