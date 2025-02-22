@@ -170,7 +170,6 @@ type-camping OR hiking :-
    [Wandern] Garmin eTrex SE 157g,
    [Wandern] Nacht-Wanderlicht 44g,
    [Wandern] Gaitors 69g,
-   [Wandern] Stativ 125g,
    [Wandern] Schaufel 27g;
 
 hiking AND cooking OR type-camping :-
@@ -256,7 +255,8 @@ bus_travel :-
    [Unterkunft] Cocoon Neck Pillow 120g;
 
 NOT always :-
-   [Unterkunft] Picnick Decke 540g;
+   [Unterkunft] Picnick Decke 540g,
+   [Wandern] Stativ 125g;
 
 :- [Verpflegung] Wasser;
 
