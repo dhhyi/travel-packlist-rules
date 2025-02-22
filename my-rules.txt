@@ -12,7 +12,7 @@ mutti :-
    [Extras] Kaffee,
    [Extras] Extras;
 
-NOT duration-daytrip AND NOT type-camping AND NOT mutti :-
+NOT duration-daytrip AND NOT type-camping :-
    Unterkunft: Bett verfügbar? $type-bed;
 
 NOT duration-daytrip AND NOT type-bed :-
@@ -255,8 +255,9 @@ bus_travel :-
 NOT always :-
    [Unterkunft] Picnick Decke 540g;
 
+:- [Verpflegung] Wasser;
+
 duration-daytrip :-
-   [Verpflegung] Wasser,
    [Verpflegung] Oats,
    [Verpflegung] Snack,
    [Utility] Löffel;
