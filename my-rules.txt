@@ -120,7 +120,7 @@ duration-longer AND NOT type-camping AND NOT washer AND NOT mutti :-
    [Wäsche] Scrubber 150g,
    [Wäsche] Travel-Wash;
 
-duration-longer AND NOT mutti :-
+duration-longer AND NOT mutti OR hiking :-
    Willst du kochen? $cooking;
 
 duration-longer AND cooking AND NOT type-camping :-
