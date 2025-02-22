@@ -173,7 +173,14 @@ type-camping OR hiking :-
    [Wandern] Schaufel 27g;
 
 hiking AND cooking OR type-camping :-
-   [Kochen] Kochzubehör 315g;
+   [Kochen] Pill bottle stove 110g,
+   [Kochen] 450ml Titan Pot 90g,
+   [Kochen] Feuerzeug mit Tape 15g,
+   [Kochen] Streichhölzer 8g,
+   [Kochen] Schieferplatte 94g,
+   [Kochen] Waschbares Tuch 7g,
+   [Tasche] Kochzubehör Packsack 10g,
+   [Verpflegung] Etwas zum Kochen;
 
 type-camping AND duration-longer :-
    [Kochen] Extra Brennstoff;
