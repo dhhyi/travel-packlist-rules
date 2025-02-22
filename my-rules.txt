@@ -263,9 +263,9 @@ NOT always :-
    [Wandern] Stativ 125g;
 
 :-
-   [Verpflegung] Wasser 0.75 1 800g,
-   [Verpflegung] Wasser 0.75 2 800g,
-   [Verpflegung] Wasser 0.75 3 800g,
+   [Verpflegung] Wasser 0.75 1 805g,
+   [Verpflegung] Wasser 0.75 2 805g,
+   [Verpflegung] Wasser 0.75 3 805g,
    [Verpflegung] Wasser 0.5 550g;
 
 duration-daytrip AND hiking :-
