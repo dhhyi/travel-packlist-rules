@@ -269,6 +269,10 @@ duration-daytrip AND hiking :-
    [Verpflegung] Snack 150g,
    [Utility] Löffel;
 
+:-
+   [Dokumente] Personalausweis,
+   [Dokumente] Geldbörse;
+
 :- Geht es ins nicht-europäische Ausland? $outside-eu;
 
 outside-eu :-
