@@ -5,18 +5,20 @@ NOT duration-daytrip :-
    Dauer: 4 Tage bis 4 Wochen? $duration-longer;
 
 duration-longer :-
-   Dauer: > 1 Monat? $duration-even_longer,
-   Mutti Besuch? $mutti;
-
-mutti :-
-   [Extras] Kaffee,
-   [Extras] Extras;
+   Dauer: > 1 Monat? $duration-even_longer;
 
 NOT duration-daytrip AND NOT type-camping :-
    Unterkunft: Bett verfügbar? $type-bed;
 
+type-bed AND duration-longer :-
+   Unterkunft: Mutti Besuch? $mutti;
+
 NOT duration-daytrip AND NOT type-bed :-
    Unterkunft: Camping? $type-camping;
+
+mutti :-
+   [Extras] Kaffee,
+   [Extras] Extras;
 
 type-camping OR NOT duration-daytrip AND NOT duration-longer :-
    [Tasche] Kleines blaues Hard Case 47g;
