@@ -36,8 +36,6 @@ duration-daytrip OR duration-longer OR hiking OR type-camping :-
 type-camping OR hiking :-
    [Wandern] Mülltasche 35g;
 
-:-;
-
 NOT duration-daytrip :-
    [Elektronik] kleines Ladegerät + Kabel 62g,
    [Elektronik] Anker Zolo Powerbank 355g,
@@ -85,7 +83,9 @@ NOT weather-freezing :-
 weather-freezing :-
    [Kleidung] Winterjacke 665g,
    [Kleidung] dicke lange Hose 540g,
-   [Kleidung] Hosenträger 175g;
+   [Kleidung] Hosenträger 175g,
+   [Kleidung] Stirnband,
+   [Kleidung] Winterhandschuhe;
 
 :-
    [Utility] Gehörschutz 22g,
@@ -160,7 +160,7 @@ weather-uv :-
 
 :-
    [Elektronik] Anker Nano Powerbank 102g,
-   [Wandern] Multifunktionstuch 35g,
+   [Kleidung] Multifunktionstuch 35g,
    [Wandern] Taschenmesser 63g;
 
 type-bed OR duration-daytrip :-
