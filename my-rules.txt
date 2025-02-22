@@ -5,9 +5,10 @@ NOT duration-daytrip :-
    Dauer: 4 Tage bis 4 Wochen? $duration-longer;
 
 duration-longer :-
-   Dauer: > 1 Monat? $duration-even_longer;
+   Dauer: > 1 Monat? $duration-even_longer,
+   Mutti Besuch? $mutti;
 
-NOT duration-daytrip AND NOT type-camping :-
+NOT duration-daytrip AND NOT type-camping AND NOT mutti :-
    Unterkunft: Bett verfügbar? $type-bed;
 
 NOT duration-daytrip AND NOT type-bed :-
@@ -98,20 +99,20 @@ NOT type-camping AND NOT duration-daytrip :-
    [Utility] Handy Ständer 118g,
    [Hygiene] Travel-Bidet + Tuch 95g;
 
-duration-longer :-
+duration-longer AND NOT mutti :-
    Hast du eine Waschmaschine zur Verfügung? $washer;
 
 duration-longer AND washer :-
    [Wäsche] Waschmaschinen Pods;
 
-type-camping OR duration-longer :-
+type-camping AND NOT mutti OR duration-longer AND NOT mutti :-
    [Wäsche] Wäscheleine 26g;
 
 duration-longer AND NOT type-camping AND NOT washer :-
    [Wäsche] Scrubber 150g,
    [Wäsche] Travel-Wash;
 
-duration-longer :-
+duration-longer AND NOT mutti :-
    Willst du kochen? $cooking;
 
 duration-longer AND cooking AND NOT type-camping :-
