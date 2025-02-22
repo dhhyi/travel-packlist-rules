@@ -120,7 +120,7 @@ duration-longer AND NOT type-camping AND NOT washer AND NOT mutti :-
    [Wäsche] Scrubber 150g,
    [Wäsche] Travel-Wash;
 
-duration-longer AND NOT mutti OR hiking :-
+duration-longer AND NOT mutti :-
    Willst du kochen? $cooking;
 
 duration-longer AND cooking AND NOT type-camping :-
@@ -173,14 +173,7 @@ type-camping OR hiking :-
    [Wandern] Schaufel 27g;
 
 hiking AND cooking OR type-camping :-
-   [Kochen] Pill bottle stove 110g,
-   [Kochen] 450ml Titan Pot 90g,
-   [Kochen] Feuerzeug mit Tape 15g,
-   [Kochen] Streichhölzer 8g,
-   [Kochen] Schieferplatte 94g,
-   [Kochen] Waschbares Tuch 7g,
-   [Tasche] Kochzubehör Packsack 10g,
-   [Verpflegung] Etwas zum Kochen;
+   [Kochen] Kochzubehör 315g;
 
 type-camping AND duration-longer :-
    [Kochen] Extra Brennstoff;
@@ -265,11 +258,15 @@ NOT always :-
    [Unterkunft] Picnick Decke 540g,
    [Wandern] Stativ 125g;
 
-:- [Verpflegung] Wasser;
+:-
+   [Verpflegung] Wasser 0.75 1 800g,
+   [Verpflegung] Wasser 0.75 2 800g,
+   [Verpflegung] Wasser 0.75 3 800g,
+   [Verpflegung] Wasser 0.5 550g;
 
 duration-daytrip AND hiking :-
-   [Verpflegung] Oats,
-   [Verpflegung] Snack,
+   [Verpflegung] Oats 500g,
+   [Verpflegung] Snack 150g,
    [Utility] Löffel;
 
 :- Geht es ins nicht-europäische Ausland? $outside-eu;
