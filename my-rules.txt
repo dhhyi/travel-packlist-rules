@@ -278,7 +278,8 @@ NOT always :-
 duration-daytrip AND hiking :-
    [Verpflegung] Oats 500g,
    [Verpflegung] Snack 150g,
-   [Utility] Löffel;
+   [Utility] Löffel,
+   [Verpflegung] alkoholfreies Bier 530g;
 
 :-
    [Dokumente] Personalausweis,
