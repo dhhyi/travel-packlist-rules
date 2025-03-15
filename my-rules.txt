@@ -231,7 +231,8 @@ type-camping OR trekking_poles :-
    [Wandern] Wanderstock 1 (Zeltstange) 270g;
 
 trekking_poles :-
-   [Wandern] Wanderstock 2 270g;
+   [Wandern] Wanderstock 2 270g,
+   [Tasche] Leki Packsack 27g;
 
 NOT type-camping :-
    Willst du arbeiten? $working;
