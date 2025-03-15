@@ -277,8 +277,8 @@ NOT always :-
    [Verpflegung] Wasser 0.5 550g;
 
 duration-daytrip AND hiking :-
-   [Verpflegung] Oats 500g,
-   [Verpflegung] Snack 150g,
+   [Verpflegung] Oats 480g,
+   [Verpflegung] Snack 190g,
    [Utility] Löffel,
    [Verpflegung] alkoholfreies Bier 530g;
 
