@@ -164,6 +164,8 @@ weather-uv :-
 
 :-
    [Elektronik] Anker Nano Powerbank 102g,
+   [Elektronik] Pixel Phone 223g,
+   [Dokumente] Schlüssel 67g,
    [Kleidung] Multifunktionstuch 35g,
    [Utility] Taschenmesser 63g;
 
