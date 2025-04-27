@@ -1,3 +1,5 @@
+# Danilos Liste
+
 NOT duration-longer AND NOT type-camping :-
    Dauer: Tagesausflug? $duration-daytrip;
 
