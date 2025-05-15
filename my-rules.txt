@@ -294,3 +294,9 @@ duration-daytrip AND hiking :-
 
 outside-eu :-
    [Dokumente] Reisepass;
+
+:- Ist es eine Geschäftsreise? $business;
+
+business :-
+   [Dokumente] Business Visa;
+
