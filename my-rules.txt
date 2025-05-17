@@ -275,6 +275,7 @@ NOT always :-
    [Wandern] Stativ 125g;
 
 :-
+   [Verpflegung] Snack 190g,
    [Verpflegung] Wasser 0.75 1 805g,
    [Verpflegung] Wasser 0.75 2 805g,
    [Verpflegung] Wasser 0.75 3 805g,
@@ -282,7 +283,6 @@ NOT always :-
 
 duration-daytrip AND hiking :-
    [Verpflegung] Oats 480g,
-   [Verpflegung] Snack 190g,
    [Utility] Löffel,
    [Verpflegung] alkoholfreies Bier 530g;
 
