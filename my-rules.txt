@@ -168,8 +168,7 @@ weather-uv :-
    [Elektronik] Anker Nano Powerbank 102g,
    [Elektronik] Pixel Phone 223g,
    [Dokumente] Schlüssel 67g,
-   [Kleidung] Multifunktionstuch 35g,
-   [Utility] Taschenmesser 63g;
+   [Kleidung] Multifunktionstuch 35g;
 
 type-bed OR duration-daytrip :-
    Wirst du wandern? $hiking;
@@ -272,7 +271,8 @@ bus_travel :-
 
 NOT always :-
    [Unterkunft] Picnick Decke 540g,
-   [Wandern] Stativ 125g;
+   [Wandern] Stativ 125g,
+   [Utility] Taschenmesser 63g;
 
 :-
    [Verpflegung] Snack 190g,
