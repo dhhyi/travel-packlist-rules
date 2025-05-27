@@ -11,7 +11,11 @@ duration-longer :-
 
 duration-longer :-
    [ToDo] Reprogram Roomba,
-   [ToDo] Takeout trash;
+   [ToDo] Takeout trash,
+   [ToDo] Water plant;
+
+duration-even_longer :-
+   [ToDo] Organize someone for checking mail;
 
 NOT duration-daytrip AND NOT type-camping :-
    Unterkunft: Bett verfügbar? $type-bed;
