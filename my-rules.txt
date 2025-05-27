@@ -9,6 +9,10 @@ NOT duration-daytrip :-
 duration-longer :-
    Dauer: > 1 Monat? $duration-even_longer;
 
+duration-longer :-
+   [ToDo] Reprogram Roomba,
+   [ToDo] Takeout trash;
+
 NOT duration-daytrip AND NOT type-camping :-
    Unterkunft: Bett verfügbar? $type-bed;
 
