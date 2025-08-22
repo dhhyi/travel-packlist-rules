@@ -302,7 +302,11 @@ NOT duration-daytrip :-
    [Dokumente] Personalausweis,
    [Dokumente] Geldbörse;
 
-:- Geht es ins nicht-europäische Ausland? $outside-eu;
+:- Geht es ins Ausland? $foreign;
+
+foreign :- [Dokumente] Travel Cards;
+
+foreign :- Geht es ins nicht-europäische Ausland? $outside-eu;
 
 outside-eu :-
    [Dokumente] Reisepass;
