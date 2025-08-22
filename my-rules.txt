@@ -119,7 +119,6 @@ NOT type-camping :-
    [Utility] Einkaufstasche 56g;
 
 NOT type-camping AND NOT duration-daytrip :-
-   [Utility] Handy Ständer 118g,
    [Hygiene] Travel-Bidet + Tuch 95g;
 
 weather-warm AND hiking :-
@@ -281,11 +280,6 @@ NOT duration-daytrip AND NOT type-camping AND NOT mutti :-
 bus_travel :-
    [Unterkunft] Cocoon Neck Pillow 120g;
 
-NOT always :-
-   [Unterkunft] Picnick Decke 540g,
-   [Wandern] Stativ 125g,
-   [Utility] Taschenmesser 63g;
-
 :-
    [Verpflegung] Snack 190g,
    [Verpflegung] Wasser 0.75 1 805g,
@@ -320,3 +314,9 @@ outside-eu :-
 
 business :-
    [Dokumente] Business Visa;
+
+NOT always :-
+   [Unterkunft] Picnick Decke 540g,
+   [Wandern] Stativ 125g,
+   [Utility] Taschenmesser 63g,
+   [Utility] Handy Ständer 118g;
