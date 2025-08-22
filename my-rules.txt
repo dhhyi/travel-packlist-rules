@@ -295,6 +295,9 @@ duration-daytrip AND hiking :-
    [Utility] Löffel,
    [Verpflegung] alkoholfreies Bier 530g;
 
+NOT duration-daytrip :-
+   [Verpflegung] Vitamin B12 Tabletten;
+
 :-
    [Dokumente] Personalausweis,
    [Dokumente] Geldbörse;
