@@ -122,6 +122,9 @@ NOT type-camping AND NOT duration-daytrip :-
    [Utility] Handy Ständer 118g,
    [Hygiene] Travel-Bidet + Tuch 95g;
 
+weather-warm AND hiking :-
+   [Utility] Handy Tasche;
+
 duration-longer AND NOT mutti :-
    Hast du eine Waschmaschine zur Verfügung? $washer;
 
@@ -304,9 +307,11 @@ NOT duration-daytrip :-
 
 :- Geht es ins Ausland? $foreign;
 
-foreign :- [Dokumente] Travel Cards;
+foreign :-
+   [Dokumente] Travel Cards;
 
-foreign :- Geht es ins nicht-europäische Ausland? $outside-eu;
+foreign :-
+   Geht es ins nicht-europäische Ausland? $outside-eu;
 
 outside-eu :-
    [Dokumente] Reisepass;
@@ -315,4 +320,3 @@ outside-eu :-
 
 business :-
    [Dokumente] Business Visa;
-
