@@ -188,7 +188,9 @@ type-bed OR duration-daytrip :-
 type-camping OR hiking :-
    [Wandern] Garmin eTrex SE 157g,
    [Wandern] Nacht-Wanderlicht 44g,
-   [Kleidung] Gaitors 69g,
+   [Kleidung] Gaitors 69g;
+
+type-camping AND NOT flight OR hiking AND NOT flight :-
    [Wandern] Schaufel 27g;
 
 hiking AND cooking OR type-camping :-
@@ -239,7 +241,7 @@ type-camping :-
    [Unterkunft] Zelt Heringe 215g,
    [Unterkunft] Coalatree Kachula Blanket 790g;
 
-type-camping OR hiking :-
+type-camping OR hiking AND NOT flight :-
    Wanderstöcke? $trekking_poles;
 
 type-camping OR trekking_poles :-
@@ -306,6 +308,7 @@ foreign :-
    [Dokumente] Travel Cards;
 
 foreign :-
+   Ist ein Flug dabei? $flight,
    Geht es ins nicht-europäische Ausland? $outside-eu;
 
 outside-eu :-
