@@ -142,8 +142,7 @@ duration-longer AND NOT mutti OR hiking :-
    Willst du kochen? $cooking;
 
 duration-longer AND cooking AND NOT type-camping :-
-   [Kochen] Flexlöffel 37g,
-   [Kochen] Käsereibe 39g;
+   [Kochen] Flexlöffel 37g;
 
 duration-longer OR type-camping :-
    [Utility] Erste-Hilfe Set 95g,
@@ -323,4 +322,5 @@ NOT always :-
    [Unterkunft] Picnick Decke 540g,
    [Wandern] Stativ 125g,
    [Utility] Taschenmesser 63g,
-   [Utility] Handy Ständer 118g;
+   [Utility] Handy Ständer 118g,
+   [Kochen] Käsereibe 39g;
