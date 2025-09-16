@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: curl https://raw.githubusercontent.com/dhhyi/travel-packlist/refs/heads/rules-cmdl/index.cjs | node - --format my-rules.txt
+      - run: curl https://raw.githubusercontent.com/dhhyi/travel-packlist/refs/heads/rules-cmdl/index.cjs | node - --format --error-on-warnings my-rules.txt
 
       - uses: EndBug/add-and-commit@v9
         with:
