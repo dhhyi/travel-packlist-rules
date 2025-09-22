@@ -12,8 +12,7 @@ duration-longer :-
 duration-longer :-
    [ToDo] Reprogram Roomba,
    [ToDo] Takeout trash,
-   [ToDo] Fliegenlicht ausschalten,
-   [ToDo] Water plant;
+   [ToDo] Fliegenlicht ausschalten;
 
 duration-even_longer :-
    [ToDo] Organize someone for checking mail;
