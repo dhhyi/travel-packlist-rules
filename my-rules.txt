@@ -202,7 +202,7 @@ hiking AND cooking OR type-camping :-
    [Kochen] Waschbares Tuch 7g,
    [Tasche] Kochzubehör Packsack 10g,
    [Verpflegung] Etwas zum Kochen,
- [Verpflegung] Kaffee/Tee;
+   [Verpflegung] Kaffee/Tee;
 
 type-camping AND duration-longer :-
    [Kochen] Extra Brennstoff;
