@@ -9,6 +9,8 @@ NOT duration-daytrip :-
 duration-longer :-
    Dauer: > 1 Monat? $duration-even_longer;
 
+:- [ToDo] Clean glasses 🤓;
+
 duration-longer :-
    [ToDo] Reprogram Roomba,
    [ToDo] Takeout trash,
