@@ -203,10 +203,12 @@ type-camping AND NOT flight OR hiking AND NOT flight :-
 
 hiking AND cooking OR type-camping :-
    [Kochen] Pill bottle stove 110g,
+   [Kochen] Windschutz Ring 57g,
    [Kochen] 450ml Titan Pot 90g,
+   [Kochen] Thermosbecher 131g,
    [Kochen] Feuerzeug mit Tape 15g,
    [Kochen] Streichhölzer 8g,
-   [Kochen] Schieferplatte 94g,
+   [Kochen] Schieferplatte mit Hitzeschutz 98g,
    [Kochen] Waschbares Tuch 7g,
    [Tasche] Kochzubehör Packsack 10g,
    [Verpflegung] Etwas zum Kochen,
