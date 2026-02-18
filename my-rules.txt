@@ -51,7 +51,7 @@ duration-daytrip OR duration-longer OR hiking OR type-camping :-
    [Optional] Stativ 366g,
    [Optional] Buch 300g,
    [Optional] Sketch Kit 275g,
-   [Optional] Messerschäfer 30g,
+   [Optional] Messerschärfer 30g,
    [Optional] kleine Bürste 26g;
 
 type-camping OR hiking :-
