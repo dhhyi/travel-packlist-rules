@@ -196,7 +196,8 @@ type-bed OR duration-daytrip :-
 type-camping OR hiking :-
    [Wandern] Garmin eTrex SE 157g,
    [Wandern] Nacht-Wanderlicht 44g,
-   [Kleidung] Gaitors 69g;
+   [Kleidung] Gaitors 69g,
+   [Verpflegung] Wasserblase 2l 184g;
 
 type-camping AND NOT flight OR hiking AND NOT flight :-
    [Wandern] Schaufel 27g;
@@ -296,10 +297,9 @@ bus_travel :-
 
 :-
    [Verpflegung] Snack 190g,
-   [Verpflegung] Wasser 0.75 1 805g,
-   [Verpflegung] Wasser 0.75 2 805g,
-   [Verpflegung] Wasser 0.75 3 805g,
-   [Verpflegung] Wasser 0.5 550g;
+   [Verpflegung] Wasser 2l 2kg,
+   [Verpflegung] Wasser 1.5l 1500g,
+   [Verpflegung] Wasserflasche 0.5l 550g;
 
 duration-daytrip AND hiking :-
    [Verpflegung] Oats 480g,
