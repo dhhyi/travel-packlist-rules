@@ -11,6 +11,9 @@ duration-longer :-
 
 :- [ToDo] Clean glasses 🤓;
 
+type-camping OR hiking :-
+   [Tasche] Cell phone pouch 104g;
+
 duration-longer :-
    [ToDo] Reprogram Roomba,
    [ToDo] Takeout trash,
