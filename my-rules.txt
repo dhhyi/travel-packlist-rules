@@ -188,8 +188,10 @@ weather-uv :-
    [Wandern] Wanderhut 96g;
 
 :-
-   [Elektronik] Anker Nano Powerbank 102g,
-   [Elektronik] Pixel Phone 223g,
+   [Elektronik] Anker Nano Powerbank 5k 23W 102g,
+   [Elektronik] Anker Nano Powerbank 10k 36W 233g,
+   [Elektronik] Pixel 8 Phone 223g,
+   [Elektronik] Pixel 10 Pro Phone 245g,
    [Dokumente] Schlüssel 67g,
    [Kleidung] Multifunktionstuch 35g;
 
