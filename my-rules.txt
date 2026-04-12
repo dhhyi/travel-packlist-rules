@@ -61,16 +61,17 @@ NOT type_camping AND duration_longer :-
    [Bag] Cable pouch Herlitz 76g;
 
 :-
-   Weather: warm (over 20 degrees)? $weather_warm,
-   Weather: cold (below 10 degrees)? $weather_cold,
+   Weather: below 0 degrees? $weather_under_0,
+   Weather: 0 to 10 degrees? $weather_0_to_10,
+   Weather: 10 to 20 degrees? $weather_10_to_20,
+   Weather: above 20 degrees? $weather_above_20,
    Weather: Rain? $weather_rain,
    Weather: high UV index? $weather_uv;
 
 NOT duration_daytrip :-
    [Clothing] Pajama pants 130g,
    [Clothing] Sleep T-Shirt 175g,
-   [Clothing] Undershirt 60g,
-   [Clothing] Long pants 340g;
+   [Clothing] Undershirt 60g;
 
 NOT duration_daytrip AND type_camping :-
    [Clothing] Change T-Shirt,
@@ -82,28 +83,31 @@ NOT duration_daytrip AND NOT type_camping :-
    [Clothing] 2 underwear 190g,
    [Clothing] 2 socks 110g;
 
-weather_warm :-
-   [Clothing] Shorts;
-
-weather_cold :-
-   Weather: really cold (below 0 degrees)? $weather_freezing;
-
-weather_cold AND NOT weather_freezing :-
-   [Clothing] Thin jacket 530g;
-
-NOT weather_freezing :-
+weather_0_to_10 OR weather_10_to_20 OR weather_above_20 :-
    [Clothing] Vest 370g;
 
-weather_freezing :-
-   [Clothing] Winter jacket 665g,
+weather_0_to_10 OR weather_10_to_20 :-
+   [Clothing] Thin jacket 530g;
+
+weather_under_0 :-
+   [Clothing] Winter jacket 665g;
+
+weather_above_20 :-
+   [Clothing] Shorts;
+
+weather_under_0 OR weather_0_to_10 OR weather_10_to_20 :-
+   [Clothing] Long pants 340g;
+
+weather_under_0 :-
    [Clothing] Thermal jogging pants 540g,
-   [Clothing] Suspenders 175g,
+   [Clothing] Suspenders 175g;
+
+weather_under_0 :-
    [Clothing] Headband,
    [Clothing] Winter gloves;
 
-weather_freezing AND hiking :-
-   [Clothing] Mesh shirt 163g,
-   [Clothing] Long underwear 164g;
+weather_under_0 AND hiking :-
+   [Clothing] Mesh shirt 163g;
 
 :-
    [Utility] Ear protection 22g,
@@ -126,7 +130,7 @@ NOT type_camping :-
 NOT type_camping AND NOT duration_daytrip :-
    [Hygiene] Travel bidet and cloth 95g;
 
-weather_warm AND hiking :-
+weather_above_20 AND hiking :-
    [Utility] Phone pouch;
 
 duration_longer :-
@@ -226,10 +230,10 @@ touringen :-
 hiking AND weather_rain :-
    [Hiking] Poncho 165g;
 
-sleeping_bag OR type_camping AND NOT weather_cold AND NOT weather_freezing :-
+sleeping_bag OR type_camping AND NOT weather_under_0 AND NOT weather_0_to_10 :-
    [Accommodation] Sleeping pad Nordmut R=1.6 580g;
 
-type_camping AND weather_cold OR type_camping AND weather_freezing :-
+type_camping AND weather_under_0 OR type_camping AND weather_0_to_10 :-
    [Accommodation] Sleeping pad Outdoorer R=4 900g;
 
 type_camping :-
@@ -240,10 +244,10 @@ sleeping_bag :-
    [Accommodation] Cocoon Camping pillow 180g,
    [Accommodation] Hut sleeping bag 500g;
 
-type_camping AND NOT weather_freezing OR sleeping_bag :-
+type_camping AND NOT weather_under_0 OR sleeping_bag :-
    [Accommodation] Sleeping bag 3-season 850g;
 
-type_camping AND weather_freezing :-
+type_camping AND weather_under_0 :-
    [Accommodation] Sleeping bag 4-season 1.7kg;
 
 type_camping :-
@@ -331,6 +335,7 @@ business :-
 
 NOT always :-
    [Accommodation] Picnic blanket 540g,
+   [Clothing] Long underwear 164g,
    [Hiking] Tripod 125g,
    [Utility] Pocket knife 63g,
    [Utility] Phone stand 118g,
