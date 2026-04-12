@@ -152,7 +152,7 @@ duration_longer OR type_camping :-
    [Utility] Cork massage ball 15g;
 
 NOT duration_daytrip :-
-   [Bag] Wash bag 57g,
+   [Bag] Transparent toiletry bag 57g,
    [Hygiene] Toothpaste 100g,
    [Hygiene] Toothbrush 17g,
    [Hygiene] Travelbuddy and soap 156g,
