@@ -267,7 +267,7 @@ type_camping AND weather_under_0 :-
 type_camping :-
    [Accommodation] Tent 845g,
    [Accommodation] Tent pegs 215g,
-   [Accommodation] Coalatree Kachula Blanket 790g;
+   [Accommodation] Isolation sheet 120g;
 
 type_camping OR hiking AND NOT flight :-
    Trekking poles? $trekking_poles;
@@ -335,6 +335,7 @@ business :-
    [Documents] Business Visa;
 
 NOT always :-
+   [Accommodation] Coalatree Kachula Blanket 790g,
    [Accommodation] Picnic blanket 540g,
    [Bag] Backpack Deuter 2.8kg,
    [Bag] Taskin compression bag 160g,
