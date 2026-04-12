@@ -161,12 +161,11 @@ NOT duration_daytrip :-
    [Bag] Wash bag 57g,
    [Hygiene] Toothpaste 100g,
    [Hygiene] Toothbrush 17g,
-   [Hygiene] Interdental brushes,
-   [Hygiene] Mouthwash,
    [Hygiene] Travelbuddy and soap 156g,
    [Hygiene] Last Swab 12g,
    [Hygiene] Lip balm 10g,
-   [Hygiene] Nail kit 55g;
+   [Hygiene] Nail kit 55g,
+   [Hygiene] Dental floss;
 
 weather_uv :-
    [Hygiene] Sunscreen;
@@ -340,4 +339,6 @@ NOT always :-
    [Hiking] Tripod 125g,
    [Utility] Pocket knife 63g,
    [Utility] Phone stand 118g,
+   [Hygiene] Interdental brushes,
+   [Hygiene] Mouthwash,
    [Cooking] Cheese grater 39g;
