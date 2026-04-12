@@ -14,7 +14,8 @@ duration_longer :-
 duration_longer :-
    [ToDo] Reprogram Roomba,
    [ToDo] Takeout trash,
-   [ToDo] Turn off fly light;
+   [ToDo] Turn off fly light,
+   [ToDo] Find someone to water plants;
 
 duration_even_longer :-
    [ToDo] Organize someone for checking mail;
