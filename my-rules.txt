@@ -323,7 +323,8 @@ foreign :-
 outside_eu :-
    [Documents] Passport;
 
-:- Is it a business trip? $business;
+NOT type_camping :-
+   Is it a business trip? $business;
 
 business :-
    [Documents] Business Visa;
