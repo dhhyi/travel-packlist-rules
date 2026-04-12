@@ -4,10 +4,10 @@ NOT duration_longer AND NOT type_camping :-
    Duration: Day trip? $duration_daytrip;
 
 NOT duration_daytrip :-
-   Duration: 4 days to 4 weeks? $duration_longer;
+   Duration: up to 4 weeks? $duration_longer;
 
 duration_longer :-
-   Duration: > 1 month? $duration_even_longer;
+   Duration: more than 1 month? $duration_even_longer;
 
 :- [ToDo] Clean glasses 🤓;
 
@@ -62,10 +62,10 @@ NOT type_camping AND duration_longer :-
    [Bag] Cable pouch Herlitz 76g;
 
 :-
-   Weather: below 0 degrees? $weather_under_0,
-   Weather: 0 to 10 degrees? $weather_0_to_10,
-   Weather: 10 to 20 degrees? $weather_10_to_20,
-   Weather: above 20 degrees? $weather_above_20,
+   Weather: 🥶 < 0 °C? $weather_under_0,
+   Weather: 🙂 0-10 °C? $weather_0_to_10,
+   Weather: 😎 10-20 °C? $weather_10_to_20,
+   Weather: 🫠 > 20 °C? $weather_above_20,
    Weather: Rain? $weather_rain,
    Weather: high UV index? $weather_uv;
 
