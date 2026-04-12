@@ -37,20 +37,17 @@ NOT type-camping AND NOT duration-longer AND NOT duration-daytrip :-
 NOT type-camping AND duration-longer :-
    [Tasche] Rucksack Mark Ryden 1.3kg;
 
-duration-daytrip OR duration-longer OR hiking OR type-camping :-
+:-
+   [Kleidung] kleine Bürste 26g,
    [Tasche] Drawstring bag 230g,
    [Wandern] Sitzkissen 95g;
 
 :-
-   [Optional] Fernglass 290g,
-   [Optional] Filter & Makro-Linse 157g,
-   [Optional] Stativ 366g,
    [Optional] Buch 300g,
-   [Optional] Sketch Kit 275g,
-   [Optional] Messerschärfer 30g,
-   [Optional] kleine Bürste 26g;
+   [Optional] Sketch Kit 275g;
 
 type-camping OR hiking :-
+   [Wandern] Fernglass 290g,
    [Wandern] Mülltasche 35g;
 
 NOT duration-daytrip :-
@@ -122,6 +119,8 @@ NOT duration-daytrip :-
    [Utility] Badeschuhe 194g;
 
 NOT type-camping :-
+   [Utility] Filter & Makro-Linse 157g,
+   [Utility] Stativ 366g,
    [Utility] Einkaufstasche 56g;
 
 NOT type-camping AND NOT duration-daytrip :-
@@ -147,6 +146,7 @@ duration-longer OR hiking :-
    Willst du kochen? $cooking;
 
 duration-longer AND cooking AND NOT type-camping :-
+   [Kochen] Messerschärfer 30g,
    [Kochen] Flexlöffel 37g;
 
 duration-longer OR type-camping :-
