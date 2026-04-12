@@ -97,13 +97,9 @@ weather_above_20 :-
 weather_under_0 OR weather_0_to_10 OR weather_10_to_20 :-
    [Clothing] Long pants 340g;
 
-weather_under_0 :-
-   [Clothing] Thermal jogging pants 540g,
-   [Clothing] Suspenders 175g;
-
-weather_under_0 :-
-   [Clothing] Headband,
-   [Clothing] Winter gloves;
+weather_under_0 OR weather_0_to_10 :-
+   [Clothing] Winter gloves,
+   [Clothing] Thermal jogging pants 540g;
 
 weather_under_0 AND hiking :-
    [Clothing] Mesh shirt 163g;
@@ -330,7 +326,9 @@ business :-
 NOT always :-
    [Accommodation] Picnic blanket 540g,
    [Bag] Backpack Deuter 2.8kg,
+   [Clothing] Headband,
    [Clothing] Long underwear 164g,
+   [Clothing] Suspenders 175g,
    [Hiking] LifeStraw 50g,
    [Hiking] Tripod 125g,
    [Utility] Pocket knife 63g,
