@@ -132,8 +132,10 @@ duration_longer AND washer :-
 type_camping OR duration_longer :-
    [Laundry] Clothesline 26g;
 
+duration_longer AND NOT washer :-
+   [Laundry] Mini Scrubber 70g;
+
 duration_longer AND NOT type_camping AND NOT washer :-
-   [Laundry] Scrubber 150g,
    [Laundry] Travel-Wash;
 
 duration_longer OR hiking :-
@@ -163,7 +165,6 @@ weather_uv :-
 type_camping :-
    [Hygiene] Travel towel 80g,
    [Bag] Rab Muon 50 Backpack 1kg,
-   [Bag] Taskin compression bag 160g,
    [Utility] Swedish cloth 10g;
 
 duration_longer AND duration_even_longer :-
@@ -324,11 +325,13 @@ business :-
 NOT always :-
    [Accommodation] Picnic blanket 540g,
    [Bag] Backpack Deuter 2.8kg,
+   [Bag] Taskin compression bag 160g,
    [Clothing] Headband,
    [Clothing] Long underwear 164g,
    [Clothing] Suspenders 175g,
    [Hiking] LifeStraw 50g,
    [Hiking] Tripod 125g,
+   [Laundry] Scrubber 150g,
    [Utility] Pocket knife 63g,
    [Utility] Phone stand 118g,
    [Hygiene] Interdental brushes,
