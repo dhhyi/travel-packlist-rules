@@ -25,15 +25,8 @@ duration-even_longer :-
 NOT duration-daytrip AND NOT type-camping :-
    Unterkunft: Bett verfügbar? $type-bed;
 
-type-bed AND duration-longer :-
-   Unterkunft: Mutti Besuch? $mutti;
-
 NOT duration-daytrip AND NOT type-bed :-
    Unterkunft: Camping? $type-camping;
-
-mutti :-
-   [Extras] Kaffee,
-   [Extras] Extras;
 
 type-camping OR NOT duration-daytrip AND NOT duration-longer :-
    [Tasche] Kleines blaues Hard Case 47g;
@@ -125,7 +118,7 @@ NOT duration-daytrip :-
    [Utility] Brillenputztuch 5g,
    [Utility] Notfall Nähset 1g;
 
-NOT duration-daytrip AND NOT mutti :-
+NOT duration-daytrip :-
    [Utility] Badeschuhe 194g;
 
 NOT type-camping :-
@@ -137,20 +130,20 @@ NOT type-camping AND NOT duration-daytrip :-
 weather-warm AND hiking :-
    [Utility] Handy Tasche;
 
-duration-longer AND NOT mutti :-
+duration-longer :-
    Hast du eine Waschmaschine zur Verfügung? $washer;
 
 duration-longer AND washer :-
    [Wäsche] Waschmaschinen Pods;
 
-type-camping AND NOT mutti OR duration-longer AND NOT mutti :-
+type-camping OR duration-longer :-
    [Wäsche] Wäscheleine 26g;
 
-duration-longer AND NOT type-camping AND NOT washer AND NOT mutti :-
+duration-longer AND NOT type-camping AND NOT washer :-
    [Wäsche] Scrubber 150g,
    [Wäsche] Travel-Wash;
 
-duration-longer AND NOT mutti OR hiking :-
+duration-longer OR hiking :-
    Willst du kochen? $cooking;
 
 duration-longer AND cooking AND NOT type-camping :-
@@ -293,7 +286,7 @@ club :-
 nonEUelectricity :-
    [Elektronik] Steckdosen-Adapter;
 
-NOT duration-daytrip AND NOT type-camping AND NOT mutti :-
+NOT duration-daytrip AND NOT type-camping :-
    Schlafsack mitbringen? $sleeping_bag,
    Längere Busfahrt? $bus_travel;
 
