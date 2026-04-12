@@ -188,7 +188,12 @@ type_camping OR hiking :-
    [Hiking] Garmin eTrex SE 157g,
    [Hiking] Night hiking light 44g,
    [Clothing] Gaiters 69g,
-   [Food] Water bladder 2l 184g;
+   [Food] Hydrapak 2l (empty) 88g,
+   [Food] Hydration bladder tube 62g;
+
+type_camping :-
+   [Food] Hydrapak 2l (empty) 2 82g,
+   [Food] Hydrapak water filter and bag 44g;
 
 type_camping AND NOT flight OR hiking AND NOT flight :-
    [Hiking] Shovel 27g;
@@ -288,14 +293,14 @@ bus_travel :-
 
 :-
    [Food] Snack 190g,
-   [Food] Water 2l 2kg,
-   [Food] Water 1.5l 1500g,
-   [Food] Water bottle 0.5l 550g;
+   [Food] Water 2l (1) 2kg,
+   [Food] Water 2l (2) 2kg,
+   [Food] Water 0.5l 500g,
+   [Food] Hydrapak 0.5l (empty) 41g;
 
 duration_daytrip AND hiking :-
    [Food] Oats 480g,
-   [Utility] Plastic spoon,
-   [Food] Non-alcoholic beer 530g;
+   [Utility] Plastic spoon;
 
 NOT duration_daytrip :-
    [Food] Vitamin B12 tablets;
@@ -329,6 +334,9 @@ NOT always :-
    [Clothing] Headband,
    [Clothing] Long underwear 164g,
    [Clothing] Suspenders 175g,
+   [Food] Non-alcoholic beer 530g,
+   [Food] Water 1.5l 1.5kg,
+   [Food] SASMO Hydration bladder 2l 122g,
    [Hiking] LifeStraw 50g,
    [Hiking] Tripod 125g,
    [Laundry] Scrubber 150g,
