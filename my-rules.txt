@@ -26,9 +26,6 @@ NOT duration_daytrip AND NOT type_camping :-
 NOT duration_daytrip AND NOT type_bed :-
    Accommodation: Camping? $type_camping;
 
-type_camping OR hiking :-
-   [Bag] Cell phone pouch 104g;
-
 type_camping OR NOT duration_daytrip AND NOT duration_longer :-
    [Bag] Small blue hard case 47g;
 
@@ -41,6 +38,7 @@ NOT type_camping AND duration_longer :-
 :-
    [Clothing] Small brush 26g,
    [Bag] Drawstring bag 230g,
+   [Bag] Cell phone pouch 104g,
    [Hiking] Seat cushion 95g;
 
 :-
@@ -130,9 +128,6 @@ NOT type_camping :-
 
 NOT type_camping AND NOT duration_daytrip :-
    [Hygiene] Travel bidet and cloth 95g;
-
-weather_above_20 AND hiking :-
-   [Utility] Phone pouch;
 
 duration_longer :-
    Do you have a washing machine available? $washer;
