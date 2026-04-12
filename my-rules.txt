@@ -132,7 +132,7 @@ duration_longer AND washer :-
    [Laundry] Washing machine pods;
 
 type_camping OR duration_longer :-
-   [Laundry] Clothesline 26g;
+   [Laundry] SeaToSummit Clothesline 26g;
 
 duration_longer AND NOT washer :-
    [Laundry] Mini Scrubber 70g;
