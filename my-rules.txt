@@ -1,40 +1,40 @@
 # Danilos Liste
 
-NOT duration-longer AND NOT type-camping :-
-   Dauer: Tagesausflug? $duration-daytrip;
+NOT duration_longer AND NOT type_camping :-
+   Dauer: Tagesausflug? $duration_daytrip;
 
-NOT duration-daytrip :-
-   Dauer: 4 Tage bis 4 Wochen? $duration-longer;
+NOT duration_daytrip :-
+   Dauer: 4 Tage bis 4 Wochen? $duration_longer;
 
-duration-longer :-
-   Dauer: > 1 Monat? $duration-even_longer;
+duration_longer :-
+   Dauer: > 1 Monat? $duration_even_longer;
 
 :- [ToDo] Clean glasses 🤓;
 
-duration-longer :-
+duration_longer :-
    [ToDo] Reprogram Roomba,
    [ToDo] Takeout trash,
    [ToDo] Fliegenlicht ausschalten;
 
-duration-even_longer :-
+duration_even_longer :-
    [ToDo] Organize someone for checking mail;
 
-NOT duration-daytrip AND NOT type-camping :-
-   Unterkunft: Bett verfügbar? $type-bed;
+NOT duration_daytrip AND NOT type_camping :-
+   Unterkunft: Bett verfügbar? $type_bed;
 
-NOT duration-daytrip AND NOT type-bed :-
-   Unterkunft: Camping? $type-camping;
+NOT duration_daytrip AND NOT type_bed :-
+   Unterkunft: Camping? $type_camping;
 
-type-camping OR hiking :-
+type_camping OR hiking :-
    [Tasche] Cell phone pouch 104g;
 
-type-camping OR NOT duration-daytrip AND NOT duration-longer :-
+type_camping OR NOT duration_daytrip AND NOT duration_longer :-
    [Tasche] Kleines blaues Hard Case 47g;
 
-NOT type-camping AND NOT duration-longer AND NOT duration-daytrip :-
+NOT type_camping AND NOT duration_longer AND NOT duration_daytrip :-
    [Tasche] Rucksack Jack Wolfskin 1140g;
 
-NOT type-camping AND duration-longer :-
+NOT type_camping AND duration_longer :-
    [Tasche] Rucksack Mark Ryden 1.3kg;
 
 :-
@@ -46,62 +46,62 @@ NOT type-camping AND duration-longer :-
    [Optional] Buch 300g,
    [Optional] Sketch Kit 275g;
 
-type-camping OR hiking :-
+type_camping OR hiking :-
    [Wandern] Fernglass 290g,
    [Wandern] Mülltasche 35g;
 
-NOT duration-daytrip :-
+NOT duration_daytrip :-
    [Elektronik] kleines Ladegerät + Kabel 62g,
    [Elektronik] Anker Zolo Powerbank 355g,
    [Elektronik] Entertainment Stick 10g;
 
-NOT type-camping AND duration-longer :-
+NOT type_camping AND duration_longer :-
    [Elektronik] Chromecast 40g,
    [Elektronik] USB-C Verlängerung 71g,
    [Tasche] Kabeltasche Herlitz 76g;
 
 :-
-   Wetter: warm (über 20 Grad)? $weather-warm,
-   Wetter: kalt (bis 10 Grad)? $weather-cold,
-   Wetter: Regen? $weather-rain,
-   Wetter: hoher UV Index? $weather-uv;
+   Wetter: warm (über 20 Grad)? $weather_warm,
+   Wetter: kalt (bis 10 Grad)? $weather_cold,
+   Wetter: Regen? $weather_rain,
+   Wetter: hoher UV Index? $weather_uv;
 
-NOT duration-daytrip :-
+NOT duration_daytrip :-
    [Kleidung] Schlafanzughose 130g,
    [Kleidung] Schlaf T-Shirt 175g,
    [Kleidung] Unterhemd 60g,
    [Kleidung] lange Hose 340g;
 
-NOT duration-daytrip AND type-camping :-
+NOT duration_daytrip AND type_camping :-
    [Kleidung] Wechsel T-Shirt,
    [Kleidung] Wechsel Unterhose,
    [Kleidung] Wechsel Strümpfe;
 
-NOT duration-daytrip AND NOT type-camping :-
+NOT duration_daytrip AND NOT type_camping :-
    [Kleidung] 3 T-Shirts 500g,
    [Kleidung] 2 Unterhosen 190g,
    [Kleidung] 2 Strümpfe 110g;
 
-weather-warm :-
+weather_warm :-
    [Kleidung] kurze Hose;
 
-weather-cold :-
-   Wetter: richtig kalt (unter 0 Grad)? $weather-freezing;
+weather_cold :-
+   Wetter: richtig kalt (unter 0 Grad)? $weather_freezing;
 
-weather-cold AND NOT weather-freezing :-
+weather_cold AND NOT weather_freezing :-
    [Kleidung] dünne Jacke 530g;
 
-NOT weather-freezing :-
+NOT weather_freezing :-
    [Kleidung] Weste 370g;
 
-weather-freezing :-
+weather_freezing :-
    [Kleidung] Winterjacke 665g,
    [Kleidung] dicke lange Hose 540g,
    [Kleidung] Hosenträger 175g,
    [Kleidung] Stirnband,
    [Kleidung] Winterhandschuhe;
 
-weather-freezing AND hiking :-
+weather_freezing AND hiking :-
    [Kleidung] Mesh Hemd 163g,
    [Kleidung] Lange Unterhose 164g;
 
@@ -110,50 +110,50 @@ weather-freezing AND hiking :-
    [Utility] Regenschirm 200g,
    [Utility] Tempo Taschentücher 25g;
 
-NOT duration-daytrip :-
+NOT duration_daytrip :-
    [Utility] Bleistift 12g,
    [Utility] Brillenputztuch 5g,
    [Utility] Notfall Nähset 1g;
 
-NOT duration-daytrip :-
+NOT duration_daytrip :-
    [Utility] Badeschuhe 194g;
 
-NOT type-camping :-
+NOT type_camping :-
    [Utility] Filter & Makro-Linse 157g,
    [Utility] Stativ 366g,
    [Utility] Einkaufstasche 56g;
 
-NOT type-camping AND NOT duration-daytrip :-
+NOT type_camping AND NOT duration_daytrip :-
    [Hygiene] Travel-Bidet + Tuch 95g;
 
-weather-warm AND hiking :-
+weather_warm AND hiking :-
    [Utility] Handy Tasche;
 
-duration-longer :-
+duration_longer :-
    Hast du eine Waschmaschine zur Verfügung? $washer;
 
-duration-longer AND washer :-
+duration_longer AND washer :-
    [Wäsche] Waschmaschinen Pods;
 
-type-camping OR duration-longer :-
+type_camping OR duration_longer :-
    [Wäsche] Wäscheleine 26g;
 
-duration-longer AND NOT type-camping AND NOT washer :-
+duration_longer AND NOT type_camping AND NOT washer :-
    [Wäsche] Scrubber 150g,
    [Wäsche] Travel-Wash;
 
-duration-longer OR hiking :-
+duration_longer OR hiking :-
    Willst du kochen? $cooking;
 
-duration-longer AND cooking AND NOT type-camping :-
+duration_longer AND cooking AND NOT type_camping :-
    [Kochen] Messerschärfer 30g,
    [Kochen] Flexlöffel 37g;
 
-duration-longer OR type-camping :-
+duration_longer OR type_camping :-
    [Utility] Erste-Hilfe Set 95g,
    [Utility] Cork massage ball 15g;
 
-NOT duration-daytrip :-
+NOT duration_daytrip :-
    [Tasche] Waschtasche 57g,
    [Hygiene] Zahnpasta 100g,
    [Hygiene] Zahnbürste 17g,
@@ -164,20 +164,20 @@ NOT duration-daytrip :-
    [Hygiene] Lippenbalsam 10g,
    [Hygiene] Nagelset 55g;
 
-weather-uv :-
+weather_uv :-
    [Hygiene] Sonnencreme;
 
-type-camping :-
+type_camping :-
    [Hygiene] Travel-Handtuch 80g,
    [Tasche] Rucksack Deuter 2.8kg,
    [Tasche] Taskin compression bag 160g,
    [Wandern] LifeStraw 50g,
    [Utility] Swedish cloth 10g;
 
-duration-longer AND duration-even_longer :-
+duration_longer AND duration_even_longer :-
    [Hygiene] Grooming Kit 120g;
 
-weather-uv :-
+weather_uv :-
    [Wandern] Wanderhut 96g;
 
 :-
@@ -188,19 +188,19 @@ weather-uv :-
    [Dokumente] Schlüssel 67g,
    [Kleidung] Multifunktionstuch 35g;
 
-type-bed OR duration-daytrip :-
+type_bed OR duration_daytrip :-
    Wirst du wandern? $hiking;
 
-type-camping OR hiking :-
+type_camping OR hiking :-
    [Wandern] Garmin eTrex SE 157g,
    [Wandern] Nacht-Wanderlicht 44g,
    [Kleidung] Gaitors 69g,
    [Verpflegung] Wasserblase 2l 184g;
 
-type-camping AND NOT flight OR hiking AND NOT flight :-
+type_camping AND NOT flight OR hiking AND NOT flight :-
    [Wandern] Schaufel 27g;
 
-hiking AND cooking OR type-camping :-
+hiking AND cooking OR type_camping :-
    [Kochen] Pill bottle stove 110g,
    [Kochen] Windschutz Ring 57g,
    [Kochen] 450ml Titan Pot 90g,
@@ -213,26 +213,26 @@ hiking AND cooking OR type-camping :-
    [Verpflegung] Etwas zum Kochen,
    [Verpflegung] Kaffee/Tee;
 
-type-camping AND duration-longer :-
+type_camping AND duration_longer :-
    [Kochen] Extra Brennstoff;
 
-hiking OR type-camping :-
+hiking OR type_camping :-
    Willst du Touringen Stempel sammeln? $touringen;
 
 touringen :-
    [Dokumente] Touringen Stempelheft 130g,
    [Dokumente] Stempelfarbe 80g;
 
-hiking AND weather-rain :-
+hiking AND weather_rain :-
    [Wandern] Poncho 165g;
 
-sleeping_bag OR type-camping AND NOT weather-cold AND NOT weather-freezing :-
+sleeping_bag OR type_camping AND NOT weather_cold AND NOT weather_freezing :-
    [Unterkunft] Isomatte Nordmut R=1.6 580g;
 
-type-camping AND weather-cold OR type-camping AND weather-freezing :-
+type_camping AND weather_cold OR type_camping AND weather_freezing :-
    [Unterkunft] Isomatte Outdoorer R=4 900g;
 
-type-camping :-
+type_camping :-
    [Unterkunft] Trekology Kissen 105g,
    [Unterkunft] 10T Kissen 290g;
 
@@ -240,28 +240,28 @@ sleeping_bag :-
    [Unterkunft] Cocoon Camping Kissen 180g,
    [Unterkunft] Hüttenschlafsack 500g;
 
-type-camping AND NOT weather-freezing OR sleeping_bag :-
+type_camping AND NOT weather_freezing OR sleeping_bag :-
    [Unterkunft] Schlafsack 3J 850g;
 
-type-camping AND weather-freezing :-
+type_camping AND weather_freezing :-
    [Unterkunft] Schlafsack 4J 1.7kg;
 
-type-camping :-
+type_camping :-
    [Unterkunft] Zelt 845g,
    [Unterkunft] Zelt Heringe 215g,
    [Unterkunft] Coalatree Kachula Blanket 790g;
 
-type-camping OR hiking AND NOT flight :-
+type_camping OR hiking AND NOT flight :-
    Wanderstöcke? $trekking_poles;
 
-type-camping OR trekking_poles :-
+type_camping OR trekking_poles :-
    [Wandern] Wanderstock 1 (Zeltstange) 270g;
 
 trekking_poles :-
    [Wandern] Wanderstock 2 270g,
    [Tasche] Leki Packsack 27g;
 
-NOT type-camping :-
+NOT type_camping :-
    Willst du arbeiten? $working;
 
 working :-
@@ -286,7 +286,7 @@ club :-
 nonEUelectricity :-
    [Elektronik] Steckdosen-Adapter;
 
-NOT duration-daytrip AND NOT type-camping :-
+NOT duration_daytrip AND NOT type_camping :-
    Schlafsack mitbringen? $sleeping_bag,
    Längere Busfahrt? $bus_travel;
 
@@ -299,12 +299,12 @@ bus_travel :-
    [Verpflegung] Wasser 1.5l 1500g,
    [Verpflegung] Wasserflasche 0.5l 550g;
 
-duration-daytrip AND hiking :-
+duration_daytrip AND hiking :-
    [Verpflegung] Oats 480g,
    [Utility] Löffel,
    [Verpflegung] alkoholfreies Bier 530g;
 
-NOT duration-daytrip :-
+NOT duration_daytrip :-
    [Verpflegung] Vitamin B12 Tabletten;
 
 :-
@@ -318,9 +318,9 @@ foreign :-
 
 foreign :-
    Ist ein Flug dabei? $flight,
-   Geht es ins nicht-europäische Ausland? $outside-eu;
+   Geht es ins nicht-europäische Ausland? $outside_eu;
 
-outside-eu :-
+outside_eu :-
    [Dokumente] Reisepass;
 
 :- Ist es eine Geschäftsreise? $business;
