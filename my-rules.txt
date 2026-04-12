@@ -173,7 +173,7 @@ weather_uv :-
 
 type_camping :-
    [Hygiene] Travel towel 80g,
-   [Bag] Backpack Deuter 2.8kg,
+   [Bag] Rab Muon 50 Backpack 1kg,
    [Bag] Taskin compression bag 160g,
    [Hiking] LifeStraw 50g,
    [Utility] Swedish cloth 10g;
@@ -335,6 +335,7 @@ business :-
 
 NOT always :-
    [Accommodation] Picnic blanket 540g,
+   [Bag] Backpack Deuter 2.8kg,
    [Clothing] Long underwear 164g,
    [Hiking] Tripod 125g,
    [Utility] Pocket knife 63g,
