@@ -281,9 +281,9 @@ club :-
    [Documents] Club ID,
    [Clothing] Club shirt;
 
-:- Will you need a power adapter? $nonEUelectricity;
+:- Will you need a power adapter? $non_eu_electricity;
 
-nonEUelectricity :-
+non_eu_electricity :-
    [Electronics] Power adapter;
 
 NOT duration_daytrip AND NOT type_camping :-
