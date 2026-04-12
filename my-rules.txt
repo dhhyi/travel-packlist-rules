@@ -50,13 +50,15 @@ type_camping OR hiking :-
    [Hiking] Silicone trash bag 35g;
 
 NOT duration_daytrip :-
-   [Electronics] Small charger and cable 62g,
+   [Electronics] Anker Charger 20W 41g,
+   [Electronics] Anker Charger 70W foldable 130g,
+   [Electronics] USB-C small flat cable 22g,
    [Electronics] Anker Zolo Powerbank 355g,
    [Electronics] Entertainment Stick 10g;
 
 NOT type_camping AND duration_longer :-
    [Electronics] Chromecast 40g,
-   [Electronics] USB-C extension 71g,
+   [Electronics] USB-C extension cable 71g,
    [Bag] Cable pouch Herlitz 76g;
 
 :-
@@ -174,7 +176,8 @@ weather_uv :-
    [Hiking] Hiking hat 96g;
 
 :-
-   [Electronics] Anker Nano Powerbank 5k 23W 102g,
+   [Electronics] Anker Nano Powerbank 5k 23W (1) 102g,
+   [Electronics] Anker Nano Powerbank 5k 23W (2) 102g,
    [Electronics] Anker Nano Powerbank 10k 36W 233g,
    [Electronics] Pixel 8 Phone 223g,
    [Electronics] Pixel 10 Pro Phone 245g,
@@ -281,10 +284,11 @@ NOT type_camping :-
 
 working :-
    [Bag] Tablet case 165g,
-   [Electronics] Large power adapter 235g,
+   [Electronics] UGreen Charger 100W 235g,
    [Electronics] Work laptop 1170g,
    [Electronics] Gaming laptop 841g,
-   [Electronics] USB-C cable 105g,
+   [Electronics] USB-C long black cable 105g,
+   [Electronics] USB-C long blue cable 48g,
    [Electronics] Tablet stand 330g,
    [Electronics] Periboard keyboard 137g,
    [Electronics] Yoga mouse 62g,
@@ -299,7 +303,7 @@ club :-
 :- Will you need a power adapter? $non_eu_electricity;
 
 non_eu_electricity :-
-   [Electronics] Power adapter;
+   [Electronics] Power adapter (non-existing);
 
 NOT duration_daytrip AND NOT type_camping :-
    Bring a sleeping bag? $sleeping_bag,
