@@ -115,7 +115,7 @@ NOT duration_daytrip :-
    [Utility] Pencil 12g,
    [Utility] Glasses cleaning cloth 5g,
    [Utility] Emergency sewing kit 1g,
-   [Utility] Bathing shoes 194g;
+   [Utility] Bathing shoes 153g;
 
 NOT type_camping :-
    [Utility] Filter and macro lens 157g,
