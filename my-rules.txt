@@ -307,20 +307,8 @@ club :-
    [Documents] Club ID,
    [Clothing] Club shirt;
 
-foreign :-
-   Will you need a power adapter? $non_eu_electricity;
-
-non_eu_electricity :-
-   [Electronics] Power adapter (non-existing);
-
 NOT duration_daytrip AND NOT type_camping :-
    Bring a sleeping bag? $sleeping_bag;
-
-NOT duration_daytrip AND NOT type_camping AND foreign :-
-   Longer bus ride? $bus_travel;
-
-bus_travel :-
-   [Accommodation] Cocoon Neck Pillow 120g;
 
 :-
    [Documents] ID card,
@@ -337,6 +325,18 @@ foreign :-
 
 outside_eu :-
    [Documents] Passport;
+
+foreign :-
+   Will you need a power adapter? $non_eu_electricity;
+
+non_eu_electricity :-
+   [Electronics] Power adapter (non-existing);
+
+NOT duration_daytrip AND NOT type_camping AND foreign :-
+   Longer bus ride? $bus_travel;
+
+bus_travel :-
+   [Accommodation] Cocoon Neck Pillow 120g;
 
 NOT type_camping :-
    Is it a business trip? $business;
