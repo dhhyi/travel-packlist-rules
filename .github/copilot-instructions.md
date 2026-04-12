@@ -30,10 +30,5 @@ If I instruct to remove an item from the list, move it to the "Stash" section. I
 
 Rules follow the syntax described in https://github.com/dhhyi/travel-packlist/blob/main/libs/documentation/src/doc/rules-documentation.md
 
-After modifying `my-rules.txt`, always run:
-
-```sh
-node rules-cmdl.cjs --format my-rules.txt
-```
-
+After modifying `my-rules.txt`, always run `.git/hooks/pre-commit`.
 This formats and validates the rules file. Fix any errors before considering the change complete.
