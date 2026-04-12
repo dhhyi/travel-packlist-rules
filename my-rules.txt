@@ -38,6 +38,7 @@ NOT type_camping AND duration_longer :-
 :-
    [Clothing] Small brush 26g,
    [Bag] Drawstring bag 230g,
+   [Bag] Trinkgefährte 67g,
    [Bag] Cell phone pouch 104g,
    [Hiking] Seat cushion 95g;
 
