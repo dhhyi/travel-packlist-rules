@@ -254,12 +254,13 @@ type_camping AND weather_under_0 OR type_camping AND weather_0_to_10 :-
    [Accommodation] Sleeping pad Outdoorer R=4 900g;
 
 type_camping :-
-   [Accommodation] Trekology pillow 105g,
-   [Accommodation] 10T pillow 290g;
+   [Accommodation] Trekology pillow 105g;
 
 sleeping_bag :-
-   [Accommodation] Cocoon Camping pillow 180g,
    [Accommodation] Hut sleeping bag 500g;
+
+type_camping OR sleeping_bag :-
+   [Accommodation] Cocoon Camping pillow 180g;
 
 type_camping AND NOT weather_under_0 OR sleeping_bag :-
    [Accommodation] Sleeping bag 3-season 850g;
@@ -338,6 +339,7 @@ business :-
    [Documents] Business Visa;
 
 NOT always :-
+   [Accommodation] 10T pillow 290g,
    [Accommodation] Coalatree Kachula Blanket 790g,
    [Accommodation] Picnic blanket 540g,
    [Bag] Backpack Deuter 2.8kg,
