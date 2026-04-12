@@ -67,7 +67,9 @@ NOT type_camping AND duration_longer :-
    Weather: 🙂 0-10 °C? $weather_0_to_10,
    Weather: 😎 10-20 °C? $weather_10_to_20,
    Weather: 🫠 > 20 °C? $weather_above_20,
-   Weather: Rain? $weather_rain,
+   Weather: Rain? $weather_rain;
+
+weather_10_to_20 OR weather_above_20 :-
    Weather: high UV index? $weather_uv;
 
 NOT duration_daytrip :-
