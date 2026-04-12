@@ -112,9 +112,7 @@ weather_under_0 AND hiking :-
 NOT duration_daytrip :-
    [Utility] Pencil 12g,
    [Utility] Glasses cleaning cloth 5g,
-   [Utility] Emergency sewing kit 1g;
-
-NOT duration_daytrip :-
+   [Utility] Emergency sewing kit 1g,
    [Utility] Bathing shoes 194g;
 
 NOT type_camping :-
