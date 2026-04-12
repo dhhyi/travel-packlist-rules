@@ -26,6 +26,9 @@ NOT duration_daytrip AND NOT type_camping :-
 NOT duration_daytrip AND NOT type_bed :-
    Accommodation: Camping? $type_camping;
 
+NOT duration_daytrip AND NOT type_camping :-
+   Accommodation: Bring a sleeping bag? $sleeping_bag;
+
 type_camping OR NOT duration_daytrip AND NOT duration_longer :-
    [Bag] Small blue hard case 47g;
 
@@ -306,9 +309,6 @@ working :-
 club :-
    [Documents] Club ID,
    [Clothing] Club shirt;
-
-NOT duration_daytrip AND NOT type_camping :-
-   Bring a sleeping bag? $sleeping_bag;
 
 :-
    [Documents] ID card,
