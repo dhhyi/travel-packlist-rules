@@ -11,9 +11,6 @@ duration-longer :-
 
 :- [ToDo] Clean glasses 🤓;
 
-type-camping OR hiking :-
-   [Tasche] Cell phone pouch 104g;
-
 duration-longer :-
    [ToDo] Reprogram Roomba,
    [ToDo] Takeout trash,
@@ -27,6 +24,9 @@ NOT duration-daytrip AND NOT type-camping :-
 
 NOT duration-daytrip AND NOT type-bed :-
    Unterkunft: Camping? $type-camping;
+
+type-camping OR hiking :-
+   [Tasche] Cell phone pouch 104g;
 
 type-camping OR NOT duration-daytrip AND NOT duration-longer :-
    [Tasche] Kleines blaues Hard Case 47g;
