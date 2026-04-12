@@ -175,7 +175,6 @@ type_camping :-
    [Hygiene] Travel towel 80g,
    [Bag] Rab Muon 50 Backpack 1kg,
    [Bag] Taskin compression bag 160g,
-   [Hiking] LifeStraw 50g,
    [Utility] Swedish cloth 10g;
 
 duration_longer AND duration_even_longer :-
@@ -337,6 +336,7 @@ NOT always :-
    [Accommodation] Picnic blanket 540g,
    [Bag] Backpack Deuter 2.8kg,
    [Clothing] Long underwear 164g,
+   [Hiking] LifeStraw 50g,
    [Hiking] Tripod 125g,
    [Utility] Pocket knife 63g,
    [Utility] Phone stand 118g,
