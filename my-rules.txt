@@ -1,336 +1,336 @@
-# Danilos Liste
+# Danilo's List
 
 NOT duration_longer AND NOT type_camping :-
-   Dauer: Tagesausflug? $duration_daytrip;
+   Duration: Day trip? $duration_daytrip;
 
 NOT duration_daytrip :-
-   Dauer: 4 Tage bis 4 Wochen? $duration_longer;
+   Duration: 4 days to 4 weeks? $duration_longer;
 
 duration_longer :-
-   Dauer: > 1 Monat? $duration_even_longer;
+   Duration: > 1 month? $duration_even_longer;
 
 :- [ToDo] Clean glasses 🤓;
 
 duration_longer :-
    [ToDo] Reprogram Roomba,
    [ToDo] Takeout trash,
-   [ToDo] Fliegenlicht ausschalten;
+   [ToDo] Turn off fly light;
 
 duration_even_longer :-
    [ToDo] Organize someone for checking mail;
 
 NOT duration_daytrip AND NOT type_camping :-
-   Unterkunft: Bett verfügbar? $type_bed;
+   Accommodation: Bed available? $type_bed;
 
 NOT duration_daytrip AND NOT type_bed :-
-   Unterkunft: Camping? $type_camping;
+   Accommodation: Camping? $type_camping;
 
 type_camping OR hiking :-
-   [Tasche] Cell phone pouch 104g;
+   [Bag] Cell phone pouch 104g;
 
 type_camping OR NOT duration_daytrip AND NOT duration_longer :-
-   [Tasche] Kleines blaues Hard Case 47g;
+   [Bag] Small blue hard case 47g;
 
 NOT type_camping AND NOT duration_longer AND NOT duration_daytrip :-
-   [Tasche] Rucksack Jack Wolfskin 1140g;
+   [Bag] Backpack Jack Wolfskin 1140g;
 
 NOT type_camping AND duration_longer :-
-   [Tasche] Rucksack Mark Ryden 1.3kg;
+   [Bag] Backpack Mark Ryden 1.3kg;
 
 :-
-   [Kleidung] kleine Bürste 26g,
-   [Tasche] Drawstring bag 230g,
-   [Wandern] Sitzkissen 95g;
+   [Clothing] Small brush 26g,
+   [Bag] Drawstring bag 230g,
+   [Hiking] Seat cushion 95g;
 
 :-
-   [Optional] Buch 300g,
+   [Optional] Book 300g,
    [Optional] Sketch Kit 275g;
 
 type_camping OR hiking :-
-   [Wandern] Fernglass 290g,
-   [Wandern] Mülltasche 35g;
+   [Hiking] Binoculars 290g,
+   [Hiking] Silicone trash bag 35g;
 
 NOT duration_daytrip :-
-   [Elektronik] kleines Ladegerät + Kabel 62g,
-   [Elektronik] Anker Zolo Powerbank 355g,
-   [Elektronik] Entertainment Stick 10g;
+   [Electronics] Small charger and cable 62g,
+   [Electronics] Anker Zolo Powerbank 355g,
+   [Electronics] Entertainment Stick 10g;
 
 NOT type_camping AND duration_longer :-
-   [Elektronik] Chromecast 40g,
-   [Elektronik] USB-C Verlängerung 71g,
-   [Tasche] Kabeltasche Herlitz 76g;
+   [Electronics] Chromecast 40g,
+   [Electronics] USB-C extension 71g,
+   [Bag] Cable pouch Herlitz 76g;
 
 :-
-   Wetter: warm (über 20 Grad)? $weather_warm,
-   Wetter: kalt (bis 10 Grad)? $weather_cold,
-   Wetter: Regen? $weather_rain,
-   Wetter: hoher UV Index? $weather_uv;
+   Weather: warm (over 20 degrees)? $weather_warm,
+   Weather: cold (below 10 degrees)? $weather_cold,
+   Weather: Rain? $weather_rain,
+   Weather: high UV index? $weather_uv;
 
 NOT duration_daytrip :-
-   [Kleidung] Schlafanzughose 130g,
-   [Kleidung] Schlaf T-Shirt 175g,
-   [Kleidung] Unterhemd 60g,
-   [Kleidung] lange Hose 340g;
+   [Clothing] Pajama pants 130g,
+   [Clothing] Sleep T-Shirt 175g,
+   [Clothing] Undershirt 60g,
+   [Clothing] Long pants 340g;
 
 NOT duration_daytrip AND type_camping :-
-   [Kleidung] Wechsel T-Shirt,
-   [Kleidung] Wechsel Unterhose,
-   [Kleidung] Wechsel Strümpfe;
+   [Clothing] Change T-Shirt,
+   [Clothing] Change underwear,
+   [Clothing] Change socks;
 
 NOT duration_daytrip AND NOT type_camping :-
-   [Kleidung] 3 T-Shirts 500g,
-   [Kleidung] 2 Unterhosen 190g,
-   [Kleidung] 2 Strümpfe 110g;
+   [Clothing] 3 T-Shirts 500g,
+   [Clothing] 2 underwear 190g,
+   [Clothing] 2 socks 110g;
 
 weather_warm :-
-   [Kleidung] kurze Hose;
+   [Clothing] Shorts;
 
 weather_cold :-
-   Wetter: richtig kalt (unter 0 Grad)? $weather_freezing;
+   Weather: really cold (below 0 degrees)? $weather_freezing;
 
 weather_cold AND NOT weather_freezing :-
-   [Kleidung] dünne Jacke 530g;
+   [Clothing] Thin jacket 530g;
 
 NOT weather_freezing :-
-   [Kleidung] Weste 370g;
+   [Clothing] Vest 370g;
 
 weather_freezing :-
-   [Kleidung] Winterjacke 665g,
-   [Kleidung] dicke lange Hose 540g,
-   [Kleidung] Hosenträger 175g,
-   [Kleidung] Stirnband,
-   [Kleidung] Winterhandschuhe;
+   [Clothing] Winter jacket 665g,
+   [Clothing] Thermal jogging pants 540g,
+   [Clothing] Suspenders 175g,
+   [Clothing] Headband,
+   [Clothing] Winter gloves;
 
 weather_freezing AND hiking :-
-   [Kleidung] Mesh Hemd 163g,
-   [Kleidung] Lange Unterhose 164g;
+   [Clothing] Mesh shirt 163g,
+   [Clothing] Long underwear 164g;
 
 :-
-   [Utility] Gehörschutz 22g,
-   [Utility] Regenschirm 200g,
-   [Utility] Tempo Taschentücher 25g;
+   [Utility] Ear protection 22g,
+   [Utility] Umbrella 200g,
+   [Utility] Paper tissues 25g;
 
 NOT duration_daytrip :-
-   [Utility] Bleistift 12g,
-   [Utility] Brillenputztuch 5g,
-   [Utility] Notfall Nähset 1g;
+   [Utility] Pencil 12g,
+   [Utility] Glasses cleaning cloth 5g,
+   [Utility] Emergency sewing kit 1g;
 
 NOT duration_daytrip :-
-   [Utility] Badeschuhe 194g;
+   [Utility] Bathing shoes 194g;
 
 NOT type_camping :-
-   [Utility] Filter & Makro-Linse 157g,
-   [Utility] Stativ 366g,
-   [Utility] Einkaufstasche 56g;
+   [Utility] Filter and macro lens 157g,
+   [Utility] Tripod 366g,
+   [Utility] Shopping bag 56g;
 
 NOT type_camping AND NOT duration_daytrip :-
-   [Hygiene] Travel-Bidet + Tuch 95g;
+   [Hygiene] Travel bidet and cloth 95g;
 
 weather_warm AND hiking :-
-   [Utility] Handy Tasche;
+   [Utility] Phone pouch;
 
 duration_longer :-
-   Hast du eine Waschmaschine zur Verfügung? $washer;
+   Do you have a washing machine available? $washer;
 
 duration_longer AND washer :-
-   [Wäsche] Waschmaschinen Pods;
+   [Laundry] Washing machine pods;
 
 type_camping OR duration_longer :-
-   [Wäsche] Wäscheleine 26g;
+   [Laundry] Clothesline 26g;
 
 duration_longer AND NOT type_camping AND NOT washer :-
-   [Wäsche] Scrubber 150g,
-   [Wäsche] Travel-Wash;
+   [Laundry] Scrubber 150g,
+   [Laundry] Travel-Wash;
 
 duration_longer OR hiking :-
-   Willst du kochen? $cooking;
+   Do you want to cook? $cooking;
 
 duration_longer AND cooking AND NOT type_camping :-
-   [Kochen] Messerschärfer 30g,
-   [Kochen] Flexlöffel 37g;
+   [Cooking] Knife sharpener 30g,
+   [Cooking] Flex spoon 37g;
 
 duration_longer OR type_camping :-
-   [Utility] Erste-Hilfe Set 95g,
+   [Utility] First aid kit 95g,
    [Utility] Cork massage ball 15g;
 
 NOT duration_daytrip :-
-   [Tasche] Waschtasche 57g,
-   [Hygiene] Zahnpasta 100g,
-   [Hygiene] Zahnbürste 17g,
-   [Hygiene] Interdentalbürsten,
-   [Hygiene] Mundspülung,
-   [Hygiene] Travelbuddy und Seife 156g,
+   [Bag] Wash bag 57g,
+   [Hygiene] Toothpaste 100g,
+   [Hygiene] Toothbrush 17g,
+   [Hygiene] Interdental brushes,
+   [Hygiene] Mouthwash,
+   [Hygiene] Travelbuddy and soap 156g,
    [Hygiene] Last Swab 12g,
-   [Hygiene] Lippenbalsam 10g,
-   [Hygiene] Nagelset 55g;
+   [Hygiene] Lip balm 10g,
+   [Hygiene] Nail kit 55g;
 
 weather_uv :-
-   [Hygiene] Sonnencreme;
+   [Hygiene] Sunscreen;
 
 type_camping :-
-   [Hygiene] Travel-Handtuch 80g,
-   [Tasche] Rucksack Deuter 2.8kg,
-   [Tasche] Taskin compression bag 160g,
-   [Wandern] LifeStraw 50g,
+   [Hygiene] Travel towel 80g,
+   [Bag] Backpack Deuter 2.8kg,
+   [Bag] Taskin compression bag 160g,
+   [Hiking] LifeStraw 50g,
    [Utility] Swedish cloth 10g;
 
 duration_longer AND duration_even_longer :-
    [Hygiene] Grooming Kit 120g;
 
 weather_uv :-
-   [Wandern] Wanderhut 96g;
+   [Hiking] Hiking hat 96g;
 
 :-
-   [Elektronik] Anker Nano Powerbank 5k 23W 102g,
-   [Elektronik] Anker Nano Powerbank 10k 36W 233g,
-   [Elektronik] Pixel 8 Phone 223g,
-   [Elektronik] Pixel 10 Pro Phone 245g,
-   [Dokumente] Schlüssel 67g,
-   [Kleidung] Multifunktionstuch 35g;
+   [Electronics] Anker Nano Powerbank 5k 23W 102g,
+   [Electronics] Anker Nano Powerbank 10k 36W 233g,
+   [Electronics] Pixel 8 Phone 223g,
+   [Electronics] Pixel 10 Pro Phone 245g,
+   [Documents] Keys 67g,
+   [Clothing] Multi-purpose scarf 35g;
 
 type_bed OR duration_daytrip :-
-   Wirst du wandern? $hiking;
+   Going hiking? $hiking;
 
 type_camping OR hiking :-
-   [Wandern] Garmin eTrex SE 157g,
-   [Wandern] Nacht-Wanderlicht 44g,
-   [Kleidung] Gaitors 69g,
-   [Verpflegung] Wasserblase 2l 184g;
+   [Hiking] Garmin eTrex SE 157g,
+   [Hiking] Night hiking light 44g,
+   [Clothing] Gaiters 69g,
+   [Food] Water bladder 2l 184g;
 
 type_camping AND NOT flight OR hiking AND NOT flight :-
-   [Wandern] Schaufel 27g;
+   [Hiking] Shovel 27g;
 
 hiking AND cooking OR type_camping :-
-   [Kochen] Pill bottle stove 110g,
-   [Kochen] Windschutz Ring 57g,
-   [Kochen] 450ml Titan Pot 90g,
-   [Kochen] Thermosbecher 131g,
-   [Kochen] Feuerzeug mit Tape 15g,
-   [Kochen] Streichhölzer 8g,
-   [Kochen] Schieferplatte mit Hitzeschutz 98g,
-   [Kochen] Waschbares Tuch 7g,
-   [Tasche] Kochzubehör Packsack 10g,
-   [Verpflegung] Etwas zum Kochen,
-   [Verpflegung] Kaffee/Tee;
+   [Cooking] Pill bottle stove 110g,
+   [Cooking] Windscreen ring 57g,
+   [Cooking] 450ml Titan Pot 90g,
+   [Cooking] Thermos mug 131g,
+   [Cooking] Lighter with tape 15g,
+   [Cooking] Matches 8g,
+   [Cooking] Slate plate with heat shield 98g,
+   [Cooking] Washable cloth 7g,
+   [Bag] Cooking accessories stuff sack 10g,
+   [Food] Something to cook,
+   [Food] Coffee/Tea;
 
 type_camping AND duration_longer :-
-   [Kochen] Extra Brennstoff;
+   [Cooking] Extra fuel;
 
 hiking OR type_camping :-
-   Willst du Touringen Stempel sammeln? $touringen;
+   Do you want to collect Touringen stamps? $touringen;
 
 touringen :-
-   [Dokumente] Touringen Stempelheft 130g,
-   [Dokumente] Stempelfarbe 80g;
+   [Documents] Touringen stamp booklet 130g,
+   [Documents] Stamp ink 80g;
 
 hiking AND weather_rain :-
-   [Wandern] Poncho 165g;
+   [Hiking] Poncho 165g;
 
 sleeping_bag OR type_camping AND NOT weather_cold AND NOT weather_freezing :-
-   [Unterkunft] Isomatte Nordmut R=1.6 580g;
+   [Accommodation] Sleeping pad Nordmut R=1.6 580g;
 
 type_camping AND weather_cold OR type_camping AND weather_freezing :-
-   [Unterkunft] Isomatte Outdoorer R=4 900g;
+   [Accommodation] Sleeping pad Outdoorer R=4 900g;
 
 type_camping :-
-   [Unterkunft] Trekology Kissen 105g,
-   [Unterkunft] 10T Kissen 290g;
+   [Accommodation] Trekology pillow 105g,
+   [Accommodation] 10T pillow 290g;
 
 sleeping_bag :-
-   [Unterkunft] Cocoon Camping Kissen 180g,
-   [Unterkunft] Hüttenschlafsack 500g;
+   [Accommodation] Cocoon Camping pillow 180g,
+   [Accommodation] Hut sleeping bag 500g;
 
 type_camping AND NOT weather_freezing OR sleeping_bag :-
-   [Unterkunft] Schlafsack 3J 850g;
+   [Accommodation] Sleeping bag 3-season 850g;
 
 type_camping AND weather_freezing :-
-   [Unterkunft] Schlafsack 4J 1.7kg;
+   [Accommodation] Sleeping bag 4-season 1.7kg;
 
 type_camping :-
-   [Unterkunft] Zelt 845g,
-   [Unterkunft] Zelt Heringe 215g,
-   [Unterkunft] Coalatree Kachula Blanket 790g;
+   [Accommodation] Tent 845g,
+   [Accommodation] Tent pegs 215g,
+   [Accommodation] Coalatree Kachula Blanket 790g;
 
 type_camping OR hiking AND NOT flight :-
-   Wanderstöcke? $trekking_poles;
+   Trekking poles? $trekking_poles;
 
 type_camping OR trekking_poles :-
-   [Wandern] Wanderstock 1 (Zeltstange) 270g;
+   [Hiking] Trekking pole 1 (tent pole) 270g;
 
 trekking_poles :-
-   [Wandern] Wanderstock 2 270g,
-   [Tasche] Leki Packsack 27g;
+   [Hiking] Trekking pole 2 270g,
+   [Bag] Leki stuff sack 27g;
 
 NOT type_camping :-
-   Willst du arbeiten? $working;
+   Do you want to work? $working;
 
 working :-
-   [Tasche] Tablet Tasche 165g,
-   [Elektronik] grosses Netzteil 235g,
-   [Elektronik] Arbeits Laptop 1170g,
-   [Elektronik] Gaming Laptop 841g,
-   [Elektronik] USB-C Kabel 105g,
-   [Elektronik] Tablet Ständer 330g,
-   [Elektronik] Periboard Tastatur 137g,
-   [Elektronik] Yoga Maus 62g,
-   [Elektronik] Ear Buds 62g;
+   [Bag] Tablet case 165g,
+   [Electronics] Large power adapter 235g,
+   [Electronics] Work laptop 1170g,
+   [Electronics] Gaming laptop 841g,
+   [Electronics] USB-C cable 105g,
+   [Electronics] Tablet stand 330g,
+   [Electronics] Periboard keyboard 137g,
+   [Electronics] Yoga mouse 62g,
+   [Electronics] Ear buds 62g;
 
-:- Gibt es ein Studentenclub Event? $club;
+:- Is there a student club event? $club;
 
 club :-
-   [Dokumente] Clubausweis,
-   [Kleidung] Club-Shirt;
+   [Documents] Club ID,
+   [Clothing] Club shirt;
 
-:- Wirst du einen Adapter für Strom brauchen? $nonEUelectricity;
+:- Will you need a power adapter? $nonEUelectricity;
 
 nonEUelectricity :-
-   [Elektronik] Steckdosen-Adapter;
+   [Electronics] Power adapter;
 
 NOT duration_daytrip AND NOT type_camping :-
-   Schlafsack mitbringen? $sleeping_bag,
-   Längere Busfahrt? $bus_travel;
+   Bring a sleeping bag? $sleeping_bag,
+   Longer bus ride? $bus_travel;
 
 bus_travel :-
-   [Unterkunft] Cocoon Neck Pillow 120g;
+   [Accommodation] Cocoon Neck Pillow 120g;
 
 :-
-   [Verpflegung] Snack 190g,
-   [Verpflegung] Wasser 2l 2kg,
-   [Verpflegung] Wasser 1.5l 1500g,
-   [Verpflegung] Wasserflasche 0.5l 550g;
+   [Food] Snack 190g,
+   [Food] Water 2l 2kg,
+   [Food] Water 1.5l 1500g,
+   [Food] Water bottle 0.5l 550g;
 
 duration_daytrip AND hiking :-
-   [Verpflegung] Oats 480g,
-   [Utility] Löffel,
-   [Verpflegung] alkoholfreies Bier 530g;
+   [Food] Oats 480g,
+   [Utility] Plastic spoon,
+   [Food] Non-alcoholic beer 530g;
 
 NOT duration_daytrip :-
-   [Verpflegung] Vitamin B12 Tabletten;
+   [Food] Vitamin B12 tablets;
 
 :-
-   [Dokumente] Personalausweis,
-   [Dokumente] Geldbörse;
+   [Documents] ID card,
+   [Documents] Wallet;
 
-:- Geht es ins Ausland? $foreign;
-
-foreign :-
-   [Dokumente] Travel Cards;
+:- Going abroad? $foreign;
 
 foreign :-
-   Ist ein Flug dabei? $flight,
-   Geht es ins nicht-europäische Ausland? $outside_eu;
+   [Documents] Travel Cards;
+
+foreign :-
+   Is there a flight? $flight,
+   Going outside the EU? $outside_eu;
 
 outside_eu :-
-   [Dokumente] Reisepass;
+   [Documents] Passport;
 
-:- Ist es eine Geschäftsreise? $business;
+:- Is it a business trip? $business;
 
 business :-
-   [Dokumente] Business Visa;
+   [Documents] Business Visa;
 
 NOT always :-
-   [Unterkunft] Picnick Decke 540g,
-   [Wandern] Stativ 125g,
-   [Utility] Taschenmesser 63g,
-   [Utility] Handy Ständer 118g,
-   [Kochen] Käsereibe 39g;
+   [Accommodation] Picnic blanket 540g,
+   [Hiking] Tripod 125g,
+   [Utility] Pocket knife 63g,
+   [Utility] Phone stand 118g,
+   [Cooking] Cheese grater 39g;
