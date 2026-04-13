@@ -1,5 +1,11 @@
 # Copilot Instructions for travel-packlist-rules
 
+## MCP server
+
+- If available, use the MCP server `rules-mcp`.
+- Set `trackWeight` to true for all calls as the rules contain weights.
+- Always call the MCP tool to answer questions about rules, items, weights, or variable constellations. Do not rely on manual analysis of the rules text when the MCP tool is available.
+
 ## Language
 
 All rules must be written in English. This includes category tags, item names, questions, and comments.
@@ -30,5 +36,4 @@ If I instruct to remove an item from the list, move it to the "Stash" section. I
 
 Rules follow the syntax described in https://github.com/dhhyi/travel-packlist/blob/main/libs/documentation/src/doc/rules-documentation.md
 
-After modifying `my-rules.txt`, always run `.git/hooks/pre-commit`.
-This formats and validates the rules file. Fix any errors before considering the change complete.
+Use the `rules-mcp` tool to validate the syntax of the rules after every change.
