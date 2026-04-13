@@ -4,7 +4,7 @@ NOT duration_longer AND NOT type_camping :-
    Duration: Day trip? $duration_daytrip;
 
 NOT duration_daytrip :-
-   Duration: up to 4 weeks? $duration_longer;
+   Duration: 4 days to 4 weeks? $duration_longer;
 
 duration_longer :-
    Duration: more than 1 month? $duration_even_longer;
@@ -80,12 +80,12 @@ NOT duration_daytrip :-
    [Clothing] Sleep T-Shirt 175g,
    [Clothing] Undershirt 60g;
 
-NOT duration_daytrip AND type_camping :-
+NOT duration_longer AND NOT duration_daytrip OR type_camping :-
    [Clothing] Change T-Shirt,
    [Clothing] Change underwear,
    [Clothing] Change socks;
 
-NOT duration_daytrip AND NOT type_camping :-
+duration_longer AND NOT duration_daytrip AND NOT type_camping :-
    [Clothing] 3 T-Shirts 500g,
    [Clothing] 2 underwear 190g,
    [Clothing] 2 socks 110g;
