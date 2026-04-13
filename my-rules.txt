@@ -81,9 +81,9 @@ NOT duration_daytrip :-
    [Clothing] Undershirt 60g;
 
 NOT duration_longer AND NOT duration_daytrip OR type_camping :-
-   [Clothing] Change T-Shirt,
-   [Clothing] Change underwear,
-   [Clothing] Change socks;
+   [Clothing] Change T-Shirt 166g,
+   [Clothing] Change underwear 81g,
+   [Clothing] Change socks 53g;
 
 duration_longer AND NOT duration_daytrip AND NOT type_camping :-
    [Clothing] 3 T-Shirts 500g,
@@ -100,14 +100,14 @@ weather_under_0 :-
    [Clothing] Winter jacket 665g;
 
 weather_above_20 :-
-   [Clothing] Shorts;
+   [Clothing] Shorts 175g;
 
 weather_under_0 OR weather_0_to_10 OR weather_10_to_20 :-
    [Clothing] Long pants 340g;
 
 weather_under_0 OR weather_0_to_10 :-
    [Clothing] Winter gloves,
-   [Clothing] Thermal jogging pants 540g;
+   [Clothing] Thermal jogging pants 397g;
 
 weather_under_0 AND hiking :-
    [Clothing] Mesh shirt 163g;
@@ -171,7 +171,7 @@ weather_uv :-
    [Hygiene] Sunscreen;
 
 type_camping :-
-   [Hygiene] Travel towel 80g,
+   [Hygiene] Travel towel 52g,
    [Bag] Rab Muon 50 Backpack 1kg,
    [Utility] Swedish cloth 10g;
 
