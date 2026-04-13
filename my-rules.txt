@@ -38,6 +38,9 @@ NOT type_camping AND NOT duration_longer AND NOT duration_daytrip :-
 NOT type_camping AND duration_longer :-
    [Bag] Backpack Mark Ryden 1.3kg;
 
+type_camping :-
+   [Bag] Rab Muon 50 Backpack 1kg;
+
 :-
    [Clothing] Small brush 26g,
    [Bag] Drawstring bag 230g,
@@ -172,7 +175,6 @@ weather_uv :-
 
 type_camping :-
    [Hygiene] Travel towel 52g,
-   [Bag] Rab Muon 50 Backpack 1kg,
    [Utility] Swedish cloth 10g;
 
 type_camping AND NOT flight :-
