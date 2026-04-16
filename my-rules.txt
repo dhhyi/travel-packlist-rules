@@ -9,7 +9,9 @@ NOT duration_daytrip :-
 duration_longer :-
    Duration: more than 1 month? $duration_even_longer;
 
-:- [ToDo] Clean glasses 🤓;
+:-
+   [ToDo] Clean glasses 🤓,
+   [ToDo] Cut nails;
 
 duration_longer :-
    [ToDo] Reprogram Roomba,
