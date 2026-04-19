@@ -112,6 +112,7 @@ weather_under_0 OR weather_0_to_10 OR weather_10_to_20 :-
 
 weather_under_0 OR weather_0_to_10 :-
    [Clothing] Winter gloves,
+   [Clothing] Long underwear 164g,
    [Clothing] Thermal jogging pants 397g;
 
 weather_under_0 AND hiking :-
@@ -355,7 +356,6 @@ NOT always :-
    [Bag] Backpack Deuter 2.8kg,
    [Bag] Taskin compression bag 160g,
    [Clothing] Headband,
-   [Clothing] Long underwear 164g,
    [Clothing] Suspenders 175g,
    [Food] Non-alcoholic beer 530g,
    [Food] Water 1.5l 1.5kg,
