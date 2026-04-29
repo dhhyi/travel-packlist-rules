@@ -233,7 +233,7 @@ hiking AND cooking OR type_camping OR duration_daytrip AND hiking :-
    [Utility] Plastic spoon;
 
 type_camping AND duration_longer :-
-   [Cooking] Extra fuel;
+   [Cooking] Extra fuel 213g;
 
 :-
    [Food] Snack 190g,
