@@ -281,7 +281,7 @@ type_camping AND weather_under_0 :-
 
 type_camping :-
    [Accommodation] Tent 845g,
-   [Accommodation] Tent pegs 215g,
+   [Accommodation] Tent pegs 187g,
    [Accommodation] Isolation sheet 120g;
 
 type_camping OR hiking AND NOT flight :-
