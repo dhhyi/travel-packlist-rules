@@ -225,6 +225,7 @@ hiking AND cooking OR type_camping :-
    [Cooking] Electronic Lighter 69g,
    [Cooking] Slate plate with heat shield 98g,
    [Cooking] Washable cloth 7g,
+   [Cooking] Mini sponge,
    [Bag] Cooking accessories stuff sack 10g,
    [Food] Something to cook,
    [Food] Coffee/Tea;
