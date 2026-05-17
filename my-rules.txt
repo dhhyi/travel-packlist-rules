@@ -210,6 +210,9 @@ type_camping OR hiking :-
    [Food] Hydration bladder tube 62g;
 
 type_camping :-
+   [Bag] Food stuff bag,
+   [Food] Package clip (1),
+   [Food] Package clip (2),
    [Food] Hydrapak 2l (empty) 2 82g,
    [Food] Hydrapak water filter and bag 44g;
 
