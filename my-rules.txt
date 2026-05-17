@@ -72,7 +72,7 @@ NOT type_camping AND duration_longer :-
    [Bag] Cable pouch Herlitz 76g;
 
 type_camping :-
-   [Electronics] Silicone bag for electronics;
+   [Bag] Silicone bag for electronics;
 
 :-
    Weather: 🥶 < 0 °C? $weather_under_0,
