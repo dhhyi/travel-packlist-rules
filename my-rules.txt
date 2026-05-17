@@ -157,7 +157,9 @@ duration_longer OR hiking :-
    Do you want to cook? $cooking;
 
 duration_longer AND cooking AND NOT type_camping :-
-   [Cooking] Knife sharpener 30g,
+   [Cooking] Knife sharpener 30g;
+
+duration_longer AND cooking AND NOT type_camping OR duration_daytrip AND cooking OR type_camping :-
    [Cooking] Flex spoon 37g;
 
 duration_longer OR type_camping :-
