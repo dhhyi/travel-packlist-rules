@@ -71,6 +71,9 @@ NOT type_camping AND duration_longer :-
    [Electronics] USB-C extension cable 71g,
    [Bag] Cable pouch Herlitz 76g;
 
+type_camping :-
+   [Bag] Silicone bag for electronics;
+
 :-
    Weather: 🥶 < 0 °C? $weather_under_0,
    Weather: 🙂 0-10 °C? $weather_0_to_10,
