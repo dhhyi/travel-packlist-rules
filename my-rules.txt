@@ -213,9 +213,6 @@ type_camping :-
    [Food] Hydrapak 2l (empty) 2 82g,
    [Food] Hydrapak water filter and bag 44g;
 
-type_camping AND NOT flight OR hiking AND NOT flight :-
-   [Hiking] Shovel 27g;
-
 hiking AND cooking OR type_camping :-
    [Cooking] Pill bottle stove 110g,
    [Cooking] Windscreen ring 57g,
@@ -363,6 +360,7 @@ NOT always :-
    [Food] Water 1.5l 1.5kg,
    [Food] SASMO Hydration bladder 2l 122g,
    [Hiking] LifeStraw 50g,
+   [Hiking] Shovel 27g,
    [Hiking] Tripod 125g,
    [Laundry] Scrubber 150g,
    [Utility] Phone stand 118g,
