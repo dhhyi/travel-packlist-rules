@@ -332,6 +332,9 @@ foreign :-
    [Documents] Travel Cards;
 
 foreign :-
+   [ToDo] Prepare eSIM;
+
+foreign :-
    Is there a flight? $flight,
    Going outside the EU? $outside_eu;
 
