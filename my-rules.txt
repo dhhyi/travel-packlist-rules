@@ -308,7 +308,6 @@ NOT type_camping :-
 
 working :-
    [Bag] Tablet case 165g,
-   [Electronics] UGreen Charger 100W 235g,
    [Electronics] Work laptop 1170g,
    [Electronics] Gaming laptop 841g,
    [Electronics] USB-C long black cable 105g,
