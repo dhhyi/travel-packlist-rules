@@ -375,6 +375,7 @@ NOT always :-
    [Hiking] Shovel 27g,
    [Hiking] Tripod 125g,
    [Laundry] Scrubber 150g,
+   [Electronics] UGreen Charger 100W 235g,
    [Utility] Phone stand 118g,
    [Hygiene] Interdental brushes,
    [Hygiene] Mouthwash,
