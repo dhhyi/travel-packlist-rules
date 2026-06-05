@@ -249,7 +249,8 @@ type_camping AND duration_longer :-
    [Food] Water 2l (1) 2kg,
    [Food] Water 2l (2) 2kg,
    [Food] Water 0.5l 500g,
-   [Food] Hydrapak 0.5l (empty) 41g;
+   [Food] Hydrapak 0.5l (empty) 41g,
+   [Food] Dopper 0.5l (empty) 106g;
 
 duration_daytrip AND hiking AND NOT cooking :-
    [Food] Overnight Oats 480g;
