@@ -214,9 +214,11 @@ type_camping OR hiking :-
    [Food] Hydrapak 2l (empty) 88g,
    [Food] Hydration bladder tube 62g;
 
+type_camping OR hiking AND weather_above_20 :-
+   [Food] Hydrapak 2l (empty) 2 82g;
+
 type_camping :-
    [Bag] Food stuff bag,
-   [Food] Hydrapak 2l (empty) 2 82g,
    [Food] Hydrapak water filter and bag 44g;
 
 type_camping OR duration_longer AND cooking :-
