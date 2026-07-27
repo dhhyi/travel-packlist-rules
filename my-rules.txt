@@ -209,6 +209,7 @@ type_bed OR duration_daytrip :-
 
 type_camping OR hiking :-
    [Hiking] Garmin eTrex SE 157g,
+   [Electronics] Spare batteries (2xAA) 48g,
    [Hiking] Night hiking light 44g,
    [Clothing] Gaiters 69g,
    [Food] Hydrapak 2l (empty) 88g,
