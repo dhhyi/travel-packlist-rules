@@ -179,8 +179,11 @@ NOT duration_daytrip :-
    [Hygiene] Nail kit 55g,
    [Hygiene] Dental floss;
 
-weather_uv :-
+weather_uv AND NOT duration_daytrip :-
    [Hygiene] Sunscreen;
+
+weather_uv AND duration_daytrip :-
+   [ToDo] Apply sunscreen;
 
 type_camping :-
    [Hygiene] Travel towel 52g,
