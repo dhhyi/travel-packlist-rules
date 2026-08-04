@@ -127,6 +127,9 @@ weather_under_0 AND hiking :-
    [Utility] Umbrella 200g,
    [Utility] Paper tissues 25g;
 
+weather_above_20 :-
+   [Utility] Chinese fan 30g;
+
 NOT duration_daytrip :-
    [Utility] Pencil 12g,
    [Utility] Glasses cleaning cloth 5g,
