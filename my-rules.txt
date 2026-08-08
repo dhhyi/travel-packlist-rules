@@ -17,8 +17,7 @@ duration_daytrip :-
 duration_longer :-
    [ToDo] Reprogram Roomba,
    [ToDo] Takeout trash,
-   [ToDo] Turn off fly light,
-   [ToDo] Find someone to water plants;
+   [ToDo] Turn off fly light;
 
 duration_even_longer :-
    [ToDo] Organize someone for checking mail;
@@ -389,4 +388,5 @@ NOT always :-
    [Utility] Phone stand 118g,
    [Hygiene] Interdental brushes,
    [Hygiene] Mouthwash,
-   [Cooking] Cheese grater 39g;
+   [Cooking] Cheese grater 39g,
+   [ToDo] Find someone to water plants;
