@@ -184,7 +184,7 @@ NOT duration_daytrip :-
 weather_uv AND NOT duration_daytrip :-
    [Hygiene] Sunscreen;
 
-weather_uv AND duration_daytrip :-
+weather_uv :-
    [ToDo] Apply sunscreen;
 
 type_camping :-
