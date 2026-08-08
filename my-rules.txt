@@ -55,8 +55,7 @@ type_camping :-
    [Optional] Sketch Kit 275g;
 
 type_camping OR hiking :-
-   [Hiking] Binoculars 290g,
-   [Hiking] Silicone trash bag 35g;
+   [Hiking] Binoculars 290g;
 
 NOT duration_daytrip :-
    [Electronics] Anker Charger 20W 41g,
@@ -71,7 +70,8 @@ NOT type_camping AND duration_longer :-
    [Bag] Cable pouch Herlitz 76g;
 
 type_camping :-
-   [Bag] Silicone bag for electronics;
+   [Bag] Silicone bag for electronics,
+   [Bag] Silicone trash bag 35g;
 
 :-
    Weather: 🥶 < 0 °C? $weather_under_0,
