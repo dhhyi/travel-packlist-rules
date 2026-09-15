@@ -249,8 +249,7 @@ hiking AND camp_stove_cooking OR type_camping :-
    [Food] Something to cook,
    [Food] Coffee/Tea;
 
-hiking AND camp_stove_cooking OR type_camping OR duration_daytrip AND hiking :-
-   [Utility] Plastic spoon;
+:- [Utility] Plastic spoon;
 
 type_camping AND duration_longer :-
    [Cooking] Extra fuel 213g;
