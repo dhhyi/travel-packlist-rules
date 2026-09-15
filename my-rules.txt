@@ -158,13 +158,16 @@ duration_longer AND NOT washer :-
 duration_longer AND NOT type_camping AND NOT washer :-
    [Laundry] Travel-Wash;
 
-duration_longer OR hiking :-
-   Do you want to cook? $cooking;
+duration_longer AND NOT type_camping :-
+   Do you want to bring kitchen prep tools? $kitchen_prep_tools;
 
-duration_longer AND cooking AND NOT type_camping :-
+hiking OR type_camping :-
+   Do you want to cook with camp stove gear? $camp_stove_cooking;
+
+duration_longer AND kitchen_prep_tools AND NOT type_camping :-
    [Cooking] Knife sharpener 30g;
 
-duration_longer AND cooking AND NOT type_camping OR duration_daytrip AND cooking OR type_camping :-
+duration_longer AND kitchen_prep_tools AND NOT type_camping OR duration_daytrip AND camp_stove_cooking OR type_camping :-
    [Cooking] Flex spoon 37g;
 
 duration_longer OR type_camping :-
@@ -227,11 +230,11 @@ type_camping :-
    [Bag] Food stuff bag,
    [Food] Hydrapak water filter and bag 44g;
 
-type_camping OR duration_longer AND cooking :-
+type_camping OR duration_longer AND kitchen_prep_tools :-
    [Food] Package clip (1),
    [Food] Package clip (2);
 
-hiking AND cooking OR type_camping :-
+hiking AND camp_stove_cooking OR type_camping :-
    [Cooking] Pill bottle stove 110g,
    [Cooking] Windscreen ring 57g,
    [Cooking] 450ml Titan Pot 90g,
@@ -246,7 +249,7 @@ hiking AND cooking OR type_camping :-
    [Food] Something to cook,
    [Food] Coffee/Tea;
 
-hiking AND cooking OR type_camping OR duration_daytrip AND hiking :-
+hiking AND camp_stove_cooking OR type_camping OR duration_daytrip AND hiking :-
    [Utility] Plastic spoon;
 
 type_camping AND duration_longer :-
@@ -260,7 +263,7 @@ type_camping AND duration_longer :-
    [Food] Hydrapak 0.5l (empty) 41g,
    [Food] Dopper 0.5l (empty) 106g;
 
-duration_daytrip AND hiking AND NOT cooking :-
+duration_daytrip AND hiking AND NOT camp_stove_cooking :-
    [Food] Overnight Oats 480g;
 
 NOT duration_daytrip :-
