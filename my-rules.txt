@@ -194,7 +194,7 @@ type_camping :-
 type_camping AND NOT flight :-
    [Utility] Pocket knife 63g;
 
-duration_longer AND duration_even_longer :-
+duration_longer AND duration_even_longer OR duration_longer AND business :-
    [Hygiene] Grooming Kit 120g;
 
 weather_uv :-
