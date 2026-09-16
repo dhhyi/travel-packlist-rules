@@ -31,6 +31,9 @@ NOT duration_daytrip AND NOT type_bed :-
 NOT duration_daytrip AND NOT type_camping :-
    Accommodation: Bring a sleeping bag? $sleeping_bag;
 
+NOT duration_daytrip AND NOT type_camping :-
+   Accommodation: Staying at hotel? $staying_at_hotel;
+
 type_camping OR NOT duration_daytrip AND NOT duration_longer :-
    [Bag] Small blue hard case 47g;
 
@@ -194,7 +197,7 @@ type_camping :-
    [Hygiene] Travel towel 52g,
    [Utility] Swedish cloth 10g;
 
-type_camping AND NOT flight :-
+type_camping AND NOT flight OR staying_at_hotel AND NOT flight :-
    [Utility] Pocket knife 63g;
 
 duration_longer AND duration_even_longer OR duration_longer AND business :-
